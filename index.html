@@ -1,978 +1,790 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사단법인 국제MD협회 | International MD Association</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사단법인 국제MD협회 — 외국인을 한국으로, 한국 상품을 세계로</title>
+<meta name="description" content="2002년 유통 현장의 상품기획자들이 모여 출발해 2017년 산업통상자원부 설립허가를 받은 비영리 사단법인. 외국인 관광객 모객, 한국 상품의 국내외 판로, 홀세일 유통센터 운영 — 세 가지 일을 합니다.">
+<meta property="og:title" content="사단법인 국제MD협회">
+<meta property="og:description" content="외국인을 한국의 매장으로, 한국 상품을 세계의 매대로.">
+<meta property="og:image" content="https://imd.or.kr/assets/hero-street.jpg">
+<meta property="og:url" content="https://imd.or.kr">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;scroll-behavior:smooth}
-body{font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;background:#f5f7fc;color:#1a1a2e;line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}button{border:none;background:none;cursor:pointer;font-family:inherit}ul{list-style:none}
-:root{--navy:#002060;--navy-dark:#010d2e;--navy-mid:#003087;--gold:#C8A94A;--gold-light:#F0C030;--white:#fff;--off-white:#f5f7fc;--border:rgba(255,255,255,0.1);--text-sub:rgba(255,255,255,0.55)}
-.util-bar{background:var(--navy-dark);padding:6px 40px;display:flex;justify-content:flex-end;align-items:center;gap:20px}
-.util-bar a{color:rgba(255,255,255,0.45);font-size:11px;letter-spacing:0.3px;transition:color 0.15s}
-.util-bar a:hover{color:#fff}
-.login-btn{background:rgba(200,169,74,0.15);border:1px solid rgba(200,169,74,0.4);color:var(--gold)!important;font-size:10.5px;font-weight:600;padding:3px 14px;border-radius:3px;letter-spacing:0.5px;cursor:pointer;transition:background 0.15s!important}
-.login-btn:hover{background:rgba(200,169,74,0.25)!important}
-nav{background:var(--navy);display:flex;align-items:stretch;padding:0 40px;position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.07)}
-.logo-wrap{display:flex;align-items:center;gap:12px;padding:12px 24px 12px 0;border-right:1px solid rgba(255,255,255,0.1);margin-right:20px;white-space:nowrap;cursor:pointer}
-.logo-mark{width:38px;height:38px;border:1.5px solid rgba(255,255,255,0.55);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;letter-spacing:0.5px;flex-shrink:0}
-.logo-text strong{display:block;font-size:13px;font-weight:700;color:#fff;letter-spacing:-0.3px}
-.logo-text span{display:block;font-size:9px;color:rgba(255,255,255,0.38);letter-spacing:0.6px;text-transform:uppercase}
-.gnb{display:flex;flex:1;align-items:stretch;position:relative}
-.gnb-item{display:flex;align-items:center;padding:0 16px;color:rgba(255,255,255,0.75);font-size:12.5px;letter-spacing:-0.2px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.15s;white-space:nowrap;position:relative}
-.gnb-item:hover{color:#fff;background:rgba(255,255,255,0.04)}
-.gnb-item.active{color:#fff;border-bottom-color:var(--gold)}
-.gnb-item.ir-menu{color:var(--gold-light);font-weight:600}
-.gnb-item.ir-menu::after{content:'NEW';position:absolute;top:11px;right:4px;background:#e53935;color:#fff;font-size:7px;font-weight:700;padding:1px 4px;border-radius:2px;letter-spacing:0.5px}
-.nav-right{display:flex;align-items:center;padding-left:16px;border-left:1px solid rgba(255,255,255,0.08);margin-left:8px}
-.nav-right button{background:rgba(200,169,74,0.12);border:1px solid rgba(200,169,74,0.35);color:var(--gold);font-size:11px;font-weight:600;padding:6px 16px;border-radius:3px;letter-spacing:0.3px;transition:background 0.15s}
-.nav-right button:hover{background:rgba(200,169,74,0.22)}
-.gnb-dropdown{position:absolute;top:100%;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--gold);display:none;z-index:999;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
-.gnb-dropdown.open{display:block}
-.dropdown-inner{max-width:1160px;margin:0 auto;padding:28px 40px;display:grid;gap:32px}
-.dropdown-col{display:flex;flex-direction:column;gap:4px}
-.dropdown-col-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(200,169,74,0.2)}
-.dropdown-link{font-size:12.5px;color:rgba(255,255,255,0.6);padding:5px 0;cursor:pointer;transition:color 0.12s;letter-spacing:-0.1px}
-.dropdown-link:hover{color:#fff}
-.page-hero{background:linear-gradient(135deg,#010d2e 0%,#002060 45%,#003087 75%,#0d3b8c 100%);padding:64px 40px 56px;position:relative;overflow:hidden}
-.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent 60%)}
-.hero-inner{max-width:1160px;margin:0 auto}
-.breadcrumb{display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(255,255,255,0.35);margin-bottom:20px;letter-spacing:0.3px}
-.breadcrumb span{cursor:pointer;transition:color 0.15s}.breadcrumb span:hover{color:rgba(255,255,255,0.7)}
-.breadcrumb-sep{color:rgba(255,255,255,0.2)}
-.hero-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.hero-title{font-size:36px;font-weight:700;color:#fff;letter-spacing:-1.2px;line-height:1.2;margin-bottom:10px}
-.hero-desc{font-size:13.5px;color:rgba(255,255,255,0.5);letter-spacing:0.1px;max-width:560px;line-height:1.7}
-.subnav{background:#fff;border-bottom:1px solid #e8ecf2;position:sticky;top:62px;z-index:900}
-.subnav-inner{max-width:1160px;margin:0 auto;padding:0 40px;display:flex}
-.subnav-item{padding:14px 20px;font-size:12.5px;color:#777;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.15s;white-space:nowrap;letter-spacing:-0.1px}
-.subnav-item:hover{color:var(--navy)}
-.subnav-item.active{color:var(--navy);font-weight:700;border-bottom-color:var(--gold)}
-.section{padding:72px 40px}
-.section-inner{max-width:1160px;margin:0 auto}
-.section-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.section-title{font-size:28px;font-weight:700;letter-spacing:-0.8px;color:#1a1a2e;margin-bottom:8px}
-.section-sub{font-size:13.5px;color:#666;margin-bottom:48px;letter-spacing:0.1px;line-height:1.7}
-.section-divider{height:1px;background:linear-gradient(90deg,#e8ecf2,transparent);margin:56px 0}
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.card{background:#fff;border:1px solid #e8ecf2;padding:32px 28px;position:relative;transition:all 0.2s;cursor:pointer}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform:scaleX(0);transition:transform 0.25s;transform-origin:left}
-.card:hover{border-color:rgba(200,169,74,0.35);box-shadow:0 6px 24px rgba(0,32,96,0.07);transform:translateY(-2px)}
-.card:hover::before{transform:scaleX(1)}
-.card-icon{font-size:28px;margin-bottom:16px;line-height:1}
-.card-num{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;margin-bottom:12px;display:block}
-.card-title{font-size:17px;font-weight:700;letter-spacing:-0.5px;color:#1a1a2e;margin-bottom:10px}
-.card-desc{font-size:12.5px;color:#888;line-height:1.7}
-.card-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);padding:3px 8px;border:1px solid rgba(200,169,74,0.3);border-radius:2px;margin-top:16px}
-.info-box{background:#f8f9fc;border:1px solid #e8ecf2;border-left:4px solid var(--gold);padding:24px 28px;margin-bottom:20px}
-.info-box-title{font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:8px;letter-spacing:-0.3px}
-.info-box-text{font-size:13px;color:#666;line-height:1.7}
-.info-row{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #f0f2f6;align-items:start}
-.info-row:last-child{border-bottom:none}
-.info-label{font-size:12px;font-weight:700;color:var(--navy);letter-spacing:-0.1px}
-.info-value{font-size:12.5px;color:#555;line-height:1.6}
-.tbl{width:100%;border-collapse:collapse;font-size:13px}
-.tbl th{background:#002060;color:#fff;font-weight:600;padding:12px 16px;text-align:left;font-size:11.5px;letter-spacing:0.3px}
-.tbl td{padding:12px 16px;border-bottom:1px solid #f0f2f6;color:#444;vertical-align:middle}
-.tbl tr:hover td{background:#fafbff}
-.badge-green{background:rgba(67,160,71,0.1);border:1px solid rgba(67,160,71,0.3);color:#2e7d32}
-.badge-blue{background:rgba(0,32,96,0.08);border:1px solid rgba(0,32,96,0.2);color:#002060}
-.badge-gold{background:rgba(200,169,74,0.1);border:1px solid rgba(200,169,74,0.3);color:#8B6914}
-.badge-red{background:rgba(229,57,53,0.08);border:1px solid rgba(229,57,53,0.2);color:#c62828}
-.timeline{position:relative;padding-left:32px}
-.timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:1.5px;background:linear-gradient(to bottom,var(--gold),rgba(200,169,74,0.15))}
-.tl-item{position:relative;margin-bottom:36px}
-.tl-item::before{content:'';position:absolute;left:-29px;top:5px;width:10px;height:10px;border:2px solid var(--gold);border-radius:50%;background:#fff}
-.tl-item.major::before{background:var(--gold);width:14px;height:14px;left:-31px;top:3px}
-.tl-year{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;margin-bottom:6px}
-.tl-title{font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:6px;letter-spacing:-0.3px}
-.tl-desc{font-size:12.5px;color:#777;line-height:1.6}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
-.stat-box{background:#fff;border:1px solid #e8ecf2;padding:28px 20px;text-align:center;position:relative;overflow:hidden}
-.stat-box::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
-.stat-box-num{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:-1px;line-height:1}
-.stat-box-unit{font-size:13px;color:var(--gold);font-weight:700;margin-left:2px}
-.stat-box-label{font-size:11px;color:#999;margin-top:6px;letter-spacing:0.3px}radius:2px;display:inline-block}
-.ir-card-status.active{background:rgba(200,169,74,0.1);border-color:rgba(200,169,74,0.35);color:#8B6914}
-.collab-banner{background:linear-gradient(90deg,#0a1629 0%,#0d2050 50%,#0a1629 100%);border-top:1px solid rgba(200,169,74,0.2);border-bottom:1px solid rgba(200,169,74,0.2);padding:20px 40px;text-align:center}
-.collab-text{font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);letter-spacing:0.5px}
-.collab-text strong{color:var(--gold-light)}
-.specfin-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#010d2e,#002060);border-top:1px solid rgba(200,169,74,0.35);padding:10px 40px;display:flex;align-items:center;justify-content:space-between;z-index:999}
-.specfin-text{font-size:12px;color:rgba(255,255,255,0.65);letter-spacing:0.2px}
-.specfin-text strong{color:var(--gold-light)}
-.specfin-link{background:rgba(200,169,74,0.12);border:1px solid rgba(200,169,74,0.35);color:var(--gold);font-size:11px;font-weight:600;padding:5px 16px;border-radius:2px;cursor:pointer}
-.specfin-close{color:rgba(255,255,255,0.3);font-size:18px;cursor:pointer;padding:0 0 0 16px;line-height:1}
-.banner-wrap{position:relative;overflow:hidden;height:420px}
-.banner-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0;transition:opacity 0.8s ease;padding:40px}
-.banner-slide.active{opacity:1;z-index:2}
-.slide-1{background:linear-gradient(135deg,#010d2e 0%,#002060 45%,#003087 75%,#0d3b8c 100%)}
-.slide-2{background:linear-gradient(135deg,#0a0e1f 0%,#0d1b3e 45%,#0a2a5c 75%,#0d3562 100%)}
-.slide-3{background:linear-gradient(135deg,#06111f 0%,#0a1f38 45%,#0d2850 75%,#102f60 100%)}
-.slide-eyebrow{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.slide-title{font-size:38px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.2;margin-bottom:16px}
-.slide-title em{font-style:normal;color:var(--gold-light)}
-.slide-desc{font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:32px;line-height:1.8}
-.slide-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.slide-tag{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:11px;padding:5px 14px;border-radius:20px}
-.slide-tag.gold{background:rgba(200,169,74,0.12);border-color:rgba(200,169,74,0.35);color:var(--gold-light)}
-.banner-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
-.dot{width:6px;height:6px;border-radius:3px;background:rgba(255,255,255,0.3);cursor:pointer;transition:all 0.3s}
-.dot.active{width:24px;background:var(--gold)}
-.banner-prev,.banner-next{position:absolute;top:50%;transform:translateY(-50%);z-index:10;color:rgba(255,255,255,0.35);font-size:28px;padding:10px 16px;cursor:pointer;user-select:none;transition:color 0.15s}
-.banner-prev:hover,.banner-next:hover{color:rgba(255,255,255,0.8)}
-.stats-bar{background:var(--navy-dark);display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(255,255,255,0.06)}
-.stat-item{padding:20px 0;text-align:center;border-right:1px solid rgba(255,255,255,0.07)}
-.stat-item:last-child{border-right:none}
-.stat-num{font-size:26px;font-weight:700;color:var(--gold-light);letter-spacing:-1px;line-height:1}
-.stat-label{font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.5px}
-.focus-banner{background:#0d1b3e;border-top:1px solid rgba(200,169,74,0.2);border-bottom:1px solid rgba(200,169,74,0.2)}
-.focus-inner{display:grid;grid-template-columns:1fr 1fr}
-.focus-card{padding:32px 40px;border-right:1px solid rgba(255,255,255,0.06);position:relative}
-.focus-card:last-child{border-right:none}
-.focus-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
-.focus-label{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.focus-label::after{content:'';flex:1;height:1px;background:rgba(200,169,74,0.2)}
-.focus-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
-.focus-sub{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7}
-.focus-cta{margin-top:20px;display:inline-flex;align-items:center;font-size:11px;font-weight:600;color:var(--gold);padding:7px 18px;border:1px solid rgba(200,169,74,0.3);border-radius:2px;cursor:pointer}
-.services-section{background:#fff}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#e8ecf2}
-.service-card{background:#fff;padding:36px 32px;position:relative;overflow:hidden;transition:background 0.2s;cursor:pointer}
-.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform 0.25s;transform-origin:left}
-.service-card:hover{background:#fafbff}.service-card:hover::after{transform:scaleX(1)}
-.service-num{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;margin-bottom:16px;display:block}
-.service-name{font-size:17px;font-weight:700;letter-spacing:-0.5px;color:#1a1a2e;margin-bottom:10px}
-.service-desc{font-size:12.5px;color:#888;line-height:1.7}
-.network-section{background:var(--navy-dark)}
-.network-section .section-title{color:#fff}
-.network-section .section-sub{color:rgba(255,255,255,0.45)}
-.network-map{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:48px;text-align:center;margin-bottom:40px}
-.regions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.region-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:24px 20px;text-align:center}
-.region-card:hover{background:rgba(255,255,255,0.07)}
-.region-name{font-size:13px;font-weight:600;color:#fff;margin-bottom:6px}
-.region-count{font-size:22px;font-weight:700;color:var(--gold-light)}
-.region-unit{font-size:10px;color:rgba(255,255,255,0.35);margin-top:2px}
-.news-section{background:#fff}
-.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.news-col-title{font-size:13px;font-weight:700;color:var(--navy);padding-bottom:12px;border-bottom:2px solid var(--navy);margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
-.news-more{font-size:10px;color:#999}
-.news-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid #f0f2f6;cursor:pointer}
-.news-item:hover .news-text{color:var(--navy)}
-.news-date{font-size:10px;color:#aaa;white-space:nowrap;margin-top:2px;min-width:64px}
-.news-text{font-size:13px;color:#333;line-height:1.5}
-.news-new{display:inline-block;background:#e53935;color:#fff;font-size:8px;font-weight:700;padding:1px 5px;border-radius:2px;margin-left:6px;vertical-align:middle}
-.quick-section{background:#f0f3fa;padding:40px}
-.quick-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
-.quick-title{font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap}
-.quick-links{display:flex;gap:12px;flex-wrap:wrap}
-.quick-link{background:#fff;border:1px solid #dde2ee;color:#444;font-size:12px;font-weight:600;padding:10px 20px;border-radius:2px;cursor:pointer;transition:all 0.15s}
-.quick-link:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-.partners-section{background:#fff;padding:40px;border-top:1px solid #eef0f5}
-.partners-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
-.partners-label{font-size:11px;font-weight:700;color:#999;white-space:nowrap;letter-spacing:1px;text-transform:uppercase}
-.partner-list{display:flex;flex-wrap:wrap;gap:8px}
-.partner-tag{background:#f4f6fb;border:1px solid #e2e6f0;color:#555;font-size:11px;padding:5px 12px;border-radius:2px}
-footer{background:var(--navy-dark);padding:48px 40px 72px;border-top:1px solid rgba(255,255,255,0.06)}
-.footer-inner{max-width:1160px;margin:0 auto}
-.footer-top{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:start;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:24px}
-.footer-logo-ko{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px}
-.footer-logo-en{font-size:10px;color:rgba(255,255,255,0.3);text-transform:uppercase}
-.footer-info{font-size:11.5px;color:rgba(255,255,255,0.38);line-height:1.9}
-.footer-info strong{color:rgba(255,255,255,0.55);font-weight:600}
-.footer-sns{display:flex;gap:8px}
-.sns-btn{width:32px;height:32px;border:1px solid rgba(255,255,255,0.12);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.15s}
-.sns-btn:hover{border-color:rgba(200,169,74,0.4);color:var(--gold)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center}
-.footer-links{display:flex;gap:20px}
-.footer-links a{font-size:11px;color:rgba(255,255,255,0.28);transition:color 0.15s;cursor:pointer}
-.footer-links a:hover{color:rgba(255,255,255,0.6)}
-.footer-copy{font-size:10.5px;color:rgba(255,255,255,0.2)}
-.activity-section{background:#0a1020;padding:64px 0}
-.activity-section .section-eyebrow{color:var(--gold)}
-.activity-section .section-title{color:#fff}
-.activity-section .section-sub{color:rgba(255,255,255,0.45)}
-.photo-masonry{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;gap:3px;margin-top:40px}
-.photo-item{position:relative;overflow:hidden;cursor:pointer}
-.photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease}
-.photo-item:hover img{transform:scale(1.04)}
-.photo-item .photo-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.75));padding:20px 14px 12px;font-size:11px;color:rgba(255,255,255,0.85);font-weight:600;letter-spacing:0.3px}
-.photo-item.tall{grid-row:span 2}
-.photo-item.wide{grid-column:span 2}
-.proof-section{background:#fff;padding:64px 0}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
-.proof-card{border:1px solid #e8ecf2;overflow:hidden;transition:box-shadow 0.2s}
-.proof-card:hover{box-shadow:0 8px 32px rgba(0,32,96,0.1)}
-.proof-card img{width:100%;height:180px;object-fit:cover;display:block}
-.proof-card-body{padding:16px}
-.proof-card-tag{font-size:9px;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
-.proof-card-title{font-size:13px;font-weight:700;color:#1a1a2e;line-height:1.4}
-.proof-card-sub{font-size:11px;color:#888;margin-top:4px}
-.press-img{width:100%;border-radius:3px;margin-bottom:12px;display:block}
-.press-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.press-photo-grid img{width:100%;height:140px;object-fit:cover;border-radius:3px}
-.global-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:32px}
-.global-photos img{width:100%;height:160px;object-fit:cover;border-radius:3px}
-.global-photo-caption{font-size:11px;color:#888;text-align:center;margin-top:6px}
-.page{display:none}
-.page.active{display:block}
+:root{
+  --paper:#F3EEE4; --paper2:#FAF7F0; --panel:#EDE6D9;
+  --ink:#241F1B; --ink2:#4A423A; --ink3:#857A6D;
+  --line:#DCD2C0; --line2:#E8E1D3;
+  --red:#A8352C; --red2:#C8584A; --navy:#2B3F6B; --gold:#B49A6B;
+  --maxw:1240px;
+  --ko:'Nanum Myeongjo',serif; --la:'Cormorant Garamond',serif; --cn:'Noto Serif SC',serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ko),var(--la),serif;
+  -webkit-font-smoothing:antialiased;line-height:1.82;font-size:16px}
+body.lang-cn{font-family:var(--cn),var(--la),serif}
+body.lang-en{font-family:var(--la),serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+@media(max-width:760px){.wrap{padding:0 16px}}
+section{padding:120px 0}
+@media(max-width:760px){section{padding:72px 0}}
+
+.eyebrow{font-family:var(--la);font-size:11.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--red);font-weight:600;margin:0 0 20px}
+.eyebrow.ko{font-family:var(--ko);letter-spacing:.14em;text-transform:none;font-size:12px}
+h2.sec{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.022em;margin:0 0 12px;line-height:1.28}
+.sec-sub{font-size:15px;color:var(--ink3);margin:0 0 46px}
+.lead{font-size:clamp(16px,1.7vw,19px);color:var(--ink2);line-height:2.05;max-width:820px}
+.rule-s{width:46px;height:2px;background:var(--red);margin:0 0 28px}
+.rv{opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.2,.7,.3,1),transform 1s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ---- 헤더 ---- */
+header{position:fixed;inset:0 0 auto 0;z-index:80;transition:background .45s,border-color .45s,backdrop-filter .45s;border-bottom:1px solid transparent}
+header.solid{background:rgba(243,238,228,.94);backdrop-filter:blur(12px);border-bottom-color:var(--line2)}
+header.onhero .menu a,header.onhero .brand b,header.onhero .brand i{color:#F3EEE4}
+header.onhero .lang{border-color:rgba(243,238,228,.35);background:rgba(0,0,0,.18)}
+header.onhero .lang button{color:#D8D0C2}
+header.onhero .burger span{background:#F3EEE4}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand img{width:30px;height:30px}
+.brand b{font-size:16px;font-weight:800;letter-spacing:.12em;white-space:nowrap;transition:color .45s}
+.brand i{font-style:normal;font-family:var(--la);font-size:10px;letter-spacing:.22em;color:var(--ink3);display:block;margin-top:1px;transition:color .45s}
+.menu{display:flex;align-items:center;gap:30px}
+.menu a{font-size:14px;letter-spacing:.05em;color:var(--ink2);position:relative;white-space:nowrap;transition:color .45s}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--red);transition:right .35s}
+.menu a:hover::after{right:0}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.45);transition:.45s}
+.lang button{font-family:var(--la);font-size:11px;letter-spacing:.12em;padding:7px 11px;background:none;border:0;color:var(--ink3);cursor:pointer;line-height:1;transition:.3s}
+.lang button.on{background:var(--red);color:#fff}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:1px;background:var(--ink);margin:5px 0;transition:.3s}
+@media(max-width:1060px){
+  .menu{position:fixed;inset:82px 0 auto 0;background:var(--paper);flex-direction:column;gap:0;padding:6px 16px 20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s;z-index:-1}
+  .menu.open{transform:none}
+  header.onhero .menu a{color:var(--ink2)}
+  .menu a{width:100%;padding:14px 0;border-bottom:1px solid var(--line2);font-size:15px}
+  .menu a::after{display:none}
+  .burger{display:block}
+}
+
+/* ---- 히어로 ---- */
+.hero{padding:0;position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#F3EEE4;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url('assets/hero-street.jpg') center 42%/cover no-repeat;transform:scale(1.04)}
+.hero .ov{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(20,17,14,.74) 0%,rgba(20,17,14,.36) 32%,rgba(20,17,14,.64) 74%,rgba(20,17,14,.93) 100%)}
+.hero .in{position:relative;z-index:2;width:100%}
+.hero .kick{font-family:var(--la);font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:#DDCDB9;margin:0 0 20px}
+.hero h1{font-size:clamp(30px,5.1vw,62px);font-weight:800;line-height:1.3;letter-spacing:-.025em;margin:0 0 24px;max-width:17em;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 em{font-style:normal;color:#E8A89C}
+.hero .sub{font-size:clamp(14px,1.6vw,17.5px);color:#CFC4B6;max-width:40em;margin:0 0 40px;line-height:1.95}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:62px}
+.btn{display:inline-block;padding:15px 32px;font-size:14.5px;letter-spacing:.06em;border:1px solid rgba(243,238,228,.5);color:#F3EEE4;transition:.35s}
+.btn:hover{background:#F3EEE4;color:var(--ink);border-color:#F3EEE4}
+.btn.solid{background:var(--red);border-color:var(--red);color:#fff}
+.btn.solid:hover{background:#8E2B23;border-color:#8E2B23;color:#fff}
+.hbar{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(243,238,228,.22)}
+.hbar>div{padding:26px 22px 34px;border-right:1px solid rgba(243,238,228,.14)}
+.hbar>div:last-child{border-right:0}
+.hbar .n{font-size:clamp(22px,2.7vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.hbar .n i{font-style:normal;font-size:.45em;color:#E8A89C;margin-left:5px}
+.hbar .t{font-size:12px;color:#BCB0A2;margin-top:8px;line-height:1.6}
+@media(max-width:860px){.hbar{grid-template-columns:1fr}.hbar>div{border-right:0;border-bottom:1px solid rgba(243,238,228,.14);padding:16px 0 18px}.hbar>div:last-child{border-bottom:0}}
+@media(max-width:760px){.hero .acts{margin-bottom:34px}}
+
+/* ---- 신뢰 바 ---- */
+.trust{background:var(--ink);color:#C9BEB0;padding:17px 0;font-size:12.5px;letter-spacing:.06em}
+.trust .wrap{display:flex;gap:28px;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center}
+.trust b{color:#F3EEE4;font-weight:400}
+.trust .dot{color:#5B5248}
+
+/* ---- 2단 ---- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.split.rev>div:first-child{order:2}
+@media(max-width:940px){.split{grid-template-columns:1fr;gap:34px}.split.rev>div:first-child{order:0}}
+.ph{position:relative;overflow:hidden;background:var(--panel)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.3,1)}
+.ph:hover img{transform:scale(1.035)}
+.cap{font-size:11.5px;color:var(--ink3);margin-top:12px;letter-spacing:.03em}
+
+/* ---- 세 가지 ---- */
+.three{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid var(--line)}
+.three>a{padding:40px 30px 44px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);display:block;transition:background .4s}
+.three>a:last-child{border-right:0}
+.three>a:hover{background:var(--paper2)}
+.three .no{font-family:var(--la);font-size:11px;letter-spacing:.28em;color:var(--red);margin-bottom:18px}
+.three h3{font-size:clamp(20px,2.2vw,25px);font-weight:800;margin:0 0 12px;letter-spacing:-.02em;line-height:1.38}
+.three p{font-size:13.5px;color:var(--ink2);margin:0 0 22px;line-height:1.9}
+.three .ar{font-size:12.5px;color:var(--ink3);border-bottom:1px solid var(--red);padding-bottom:3px}
+@media(max-width:900px){.three{grid-template-columns:1fr}.three>a{border-right:0}}
+
+/* ---- 인용 ---- */
+.quote{background:var(--paper2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.quote .q{font-size:clamp(22px,3.3vw,38px);font-weight:700;line-height:1.62;letter-spacing:-.018em;margin:0 0 30px;max-width:21em}
+.quote .q em{font-style:normal;color:var(--red)}
+.quote .who{display:flex;align-items:center;gap:16px;font-size:14px;color:var(--ink3);flex-wrap:wrap}
+.quote .who b{font-size:18px;color:var(--ink);letter-spacing:.14em;font-weight:700}
+.quote .who .ln{width:34px;height:1px;background:var(--red)}
+
+/* ---- 숫자 ---- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.stat{padding:36px 28px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.stat:nth-child(4n){border-right:0}
+.stat .n{font-size:clamp(30px,4.2vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.stat .n i{font-style:normal;font-size:.42em;color:var(--red);margin-left:6px;letter-spacing:0}
+.stat .l{font-size:13.5px;color:var(--ink2);margin-top:14px;line-height:1.6}
+.stat .l span{display:block;font-size:11.5px;color:var(--ink3);margin-top:3px}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(4n){border-right:1px solid var(--line)}.stat:nth-child(2n){border-right:0}}
+
+/* ---- 표 ---- */
+.info{width:100%;border-collapse:collapse;margin-top:44px}
+.info th,.info td{border-bottom:1px solid var(--line2);padding:18px 4px;text-align:left;vertical-align:top;font-weight:400}
+.info th{width:190px;color:var(--ink3);font-size:13.5px}
+.info td{color:var(--ink2);font-size:15px}
+@media(max-width:680px){.info th,.info td{display:block;width:100%;padding:0}.info th{padding-top:17px;font-size:12px}.info td{padding:4px 0 17px;border-bottom:1px solid var(--line2)}.info tr:first-child th{padding-top:0}}
+
+/* ---- 다크 ---- */
+.dark{background:#1E1A17;color:#E6DED2;border-top:1px solid #322C27}
+.dark h2.sec{color:#FBF7F0}.dark .sec-sub{color:#978B7C}.dark .lead{color:#C4B9AB}
+.dark .eyebrow{color:var(--red2)}.dark .eyebrow.ko{color:#978B7C}
+.dark .stats{border-top-color:#3A332D}.dark .stat{border-color:#3A332D}
+.dark .stat .l{color:#C4B9AB}.dark .stat .l span{color:#8A7F72}
+
+/* ---- 바 ---- */
+.bars{margin-top:40px;display:grid;gap:16px}
+.bar{display:grid;grid-template-columns:210px 1fr 86px;align-items:center;gap:20px}
+.bar .bl{font-size:13.5px}.bar .bl span{display:block;font-size:11px;color:#8A7F72}
+.bar .bt{height:10px;background:#312B26;position:relative;overflow:hidden}
+.bar .bf{position:absolute;inset:0 100% 0 0;background:#5C5248;transition:right 1.4s cubic-bezier(.2,.7,.3,1)}
+.bar.hl .bf{background:var(--red)}
+.bar .bv{font-size:14px;text-align:right}
+.bar.hl .bv{color:var(--red2);font-weight:700}
+@media(max-width:680px){.bar{grid-template-columns:118px 1fr 58px;gap:10px}.bar .bl{font-size:12.5px}}
+
+/* ---- 카드 ---- */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+@media(max-width:940px){.g3{grid-template-columns:1fr}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g4{grid-template-columns:1fr}}
+.cd{background:var(--paper2);border:1px solid var(--line);padding:32px 28px}
+.dark .cd{background:rgba(255,255,255,.035);border-color:#3A332D}
+.cd .ct{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.cd h4{font-size:19px;margin:0 0 4px;font-weight:800;letter-spacing:-.015em}
+.cd .pc{font-size:16px;color:var(--red2);font-weight:800;white-space:nowrap}
+.cd .cs{font-size:12.5px;color:var(--ink3);margin:0 0 18px}
+.dark .cd .cs{color:#8A7F72}
+.cd p{font-size:13.5px;color:var(--ink2);margin:0;line-height:1.92}
+.dark .cd p{color:#BBB0A2}
+
+/* ---- 2단 리스트 ---- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px}
+.duo .k{border-top:2px solid var(--ink);padding-top:22px}
+.duo .k.r{border-top-color:var(--red)}
+.dark .duo .k{border-top-color:#6A6058}.dark .duo .k.r{border-top-color:var(--red2)}
+.duo h4{font-size:21px;margin:0 0 4px;font-weight:800}
+.duo .ks{font-size:12.5px;color:var(--ink3);margin:0 0 20px}
+.dark .duo .ks{color:#8A7F72}
+.duo ul{list-style:none;margin:0;padding:0}
+.duo li{font-size:14.5px;color:var(--ink2);padding:12px 0;border-bottom:1px solid var(--line2);line-height:1.8}
+.dark .duo li{color:#C4B9AB;border-bottom-color:#332D28}
+.duo li span{display:block;font-size:11.5px;color:var(--ink3);margin-top:2px}
+.dark .duo li span{color:#8A7F72}
+@media(max-width:820px){.duo{grid-template-columns:1fr;gap:34px}}
+
+/* ---- 프로세스 ---- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border:1px solid var(--line)}
+.dark .flow{border-color:#3A332D}
+.flow>div{padding:28px 24px;border-right:1px solid var(--line)}
+.dark .flow>div{border-right-color:#3A332D}
+.flow>div:last-child{border-right:0}
+.flow .fn{font-family:var(--la);font-size:11px;letter-spacing:.24em;color:var(--red);margin-bottom:12px}
+.flow h5{font-size:15px;margin:0 0 4px;font-weight:700;line-height:1.5}
+.dark .flow h5{color:#E6DED2}
+.flow p{font-size:11.5px;color:var(--ink3);margin:0}
+.dark .flow p{color:#8A7F72}
+@media(max-width:860px){.flow{grid-template-columns:repeat(2,1fr)}.flow>div:nth-child(2n){border-right:0}.flow>div:nth-child(-n+2){border-bottom:1px solid var(--line)}.dark .flow>div:nth-child(-n+2){border-bottom-color:#3A332D}}
+@media(max-width:460px){.flow{grid-template-columns:1fr}.flow>div{border-right:0;border-bottom:1px solid var(--line)}.flow>div:last-child{border-bottom:0}}
+
+/* ---- 사진 밴드 ---- */
+.band{position:relative;height:clamp(300px,48vw,560px);overflow:hidden}
+.band img{width:100%;height:100%;object-fit:cover}
+.band .bov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,15,13,.93) 0%,rgba(18,15,13,.82) 34%,rgba(18,15,13,.48) 68%,rgba(18,15,13,.28) 100%)}
+.band .btx{position:absolute;inset:0;display:flex;align-items:center}
+.band .btx .wrap{width:100%}
+.band h3{font-size:clamp(21px,3.2vw,38px);color:#F3EEE4;font-weight:800;margin:0 0 10px;letter-spacing:-.02em;max-width:13.5em;line-height:1.38;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.band p{color:#C3B8AA;font-size:14.5px;margin:0;max-width:34em;line-height:1.9}
+
+/* ---- 사진 그리드 ---- */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.pg figure{margin:0}
+.pg img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.pg figcaption{font-size:11.5px;color:var(--ink3);margin-top:9px}
+@media(max-width:860px){.pg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.pg{grid-template-columns:1fr}}
+
+/* ---- 거점 ---- */
+.globe{display:grid;grid-template-columns:repeat(5,1fr);margin-top:24px;border-top:1px solid var(--line)}
+.globe>div{padding:34px 20px 36px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.globe>div:last-child{border-right:0}
+.globe .pin{width:6px;height:6px;border-radius:50%;background:var(--red);margin-bottom:18px}
+.globe .city{font-family:var(--la);font-size:15px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px}
+.globe .kr{font-size:19px;font-weight:800;margin-bottom:9px}
+.globe .rl{font-size:11.5px;color:var(--ink3);line-height:1.75}
+@media(max-width:900px){.globe{grid-template-columns:repeat(2,1fr)}.globe>div{border-right:1px solid var(--line)}.globe>div:nth-child(2n){border-right:0}.globe>div:last-child{border-right:0}}
+@media(max-width:420px){.globe{grid-template-columns:1fr}.globe>div{border-right:0}}
+
+/* ---- 연혁 ---- */
+.tl{margin-top:46px;border-top:1px solid var(--line)}
+.tl .row{display:grid;grid-template-columns:118px 1fr;gap:26px;padding:19px 0;border-bottom:1px solid var(--line2);align-items:baseline}
+.tl .yr{font-family:var(--la);font-size:18px;letter-spacing:.07em;color:var(--ink3)}
+.tl .row.on .yr{color:var(--red);font-weight:700}
+.tl .tx{font-size:15px;color:var(--ink2)}
+@media(max-width:600px){.tl .row{grid-template-columns:70px 1fr;gap:14px}.tl .tx{font-size:14px}}
+
+/* ---- 로고월 ---- */
+.wall{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:22px}
+.wall>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:108px;transition:background .4s}
+.wall>div:hover{background:var(--paper2)}
+.wall .n{font-size:14.5px;font-weight:700;letter-spacing:-.01em;line-height:1.45}
+.wall .e{font-family:var(--la);font-size:10.5px;letter-spacing:.14em;color:var(--ink3);text-transform:uppercase;margin-top:6px}
+@media(max-width:900px){.wall{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.wall{grid-template-columns:repeat(2,1fr)}.wall .n{font-size:13px}}
+
+/* ---- 활동 ---- */
+.news{margin-top:44px;border-top:1px solid var(--line)}
+.news .it{display:grid;grid-template-columns:132px 1fr 112px;gap:26px;padding:24px 0;border-bottom:1px solid var(--line2);align-items:baseline}
+.news .dt{font-family:var(--la);font-size:14px;letter-spacing:.09em;color:var(--ink3)}
+.news .tt{font-size:16.5px;color:var(--ink);line-height:1.62}
+.news .tg{font-size:11px;letter-spacing:.14em;color:var(--red);text-align:right;text-transform:uppercase;font-family:var(--la)}
+@media(max-width:720px){.news .it{grid-template-columns:1fr;gap:6px;padding:18px 0}.news .tg{text-align:left}}
+
+/* ---- 문 ---- */
+.doors{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:48px}
+.doors a{padding:38px 28px 44px;border-right:1px solid var(--line);transition:background .4s;display:block}
+.doors a:last-child{border-right:0}
+.doors a:hover{background:var(--paper2)}
+.doors .dn{font-family:var(--la);font-size:11px;letter-spacing:.26em;color:var(--red);margin-bottom:16px}
+.doors h4{font-size:19px;margin:0 0 8px;font-weight:800}
+.doors p{font-size:13px;color:var(--ink3);margin:0 0 20px;line-height:1.75}
+.doors .ar{font-size:13px;color:var(--ink);border-bottom:1px solid var(--red);padding-bottom:4px;display:inline-block}
+@media(max-width:900px){.doors{grid-template-columns:repeat(2,1fr)}.doors a:nth-child(2n){border-right:0}.doors a:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.doors{grid-template-columns:1fr}.doors a{border-right:0;border-bottom:1px solid var(--line)}.doors a:last-child{border-bottom:0}}
+
+/* ---- 명함 ---- */
+.card{background:var(--paper2);border:1px solid var(--line);padding:56px 52px;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;margin-top:48px}
+.card .nm{font-size:28px;font-weight:800;letter-spacing:.06em;margin:0 0 6px}
+.card .nm small{font-family:var(--la);font-size:14px;letter-spacing:.2em;color:var(--ink3);margin-left:12px;font-weight:400}
+.card .role{font-size:14px;color:var(--ink2);margin:0 0 30px;padding-left:22px;position:relative}
+.card .role::before{content:"";position:absolute;left:0;top:11px;width:13px;height:1px;background:var(--red)}
+.card dl{margin:0;display:grid;grid-template-columns:74px 1fr;gap:11px 16px;font-size:14.5px}
+.card dt{color:var(--ink3);font-size:12.5px;letter-spacing:.1em;padding-top:2px}
+.card dd{margin:0;color:var(--ink2)}
+.card dd a:hover{color:var(--red)}
+.card .rt{text-align:right}
+.card .rt img{width:50px;margin-left:auto;margin-bottom:24px}
+.card .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--line2);font-size:12px;color:var(--ink3);line-height:1.9}
+.card .offices{font-family:var(--la);font-size:12px;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase;margin-top:10px}
+@media(max-width:860px){.card{grid-template-columns:1fr;padding:34px 22px;gap:28px}.card .rt{text-align:left}.card .rt img{margin-left:0}}
+
+footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--paper2)}
+.fin{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;flex-wrap:wrap}
+.fin .l{font-size:12.5px;color:var(--ink3);line-height:1.95}
+.fin .r{font-family:var(--la);font-size:11px;letter-spacing:.24em;color:var(--ink3);text-transform:uppercase}
 </style>
 </head>
-<body>
+<body class="lang-ko">
 
-<!-- UTIL BAR -->
-<div class="util-bar">
-  <a href="#" onclick="showPage('about-intro')">협회소개</a>
-  <a href="#" onclick="showPage('about-location')">찾아오시는 길</a>
-  <a href="#" onclick="showPage('sitemap')">사이트맵</a>
-  <span class="login-btn" onclick="showPage('member-join')">회원 로그인</span>
-</div>
-
-<!-- NAV -->
-<nav id="mainNav">
-  <div class="logo-wrap" onclick="showPage('home')">
-    <div class="logo-mark">IMD</div>
-    <div class="logo-text"><strong>사단법인 국제MD협회</strong><span>International MD Association</span></div>
-  </div>
-  <div class="gnb" id="gnb">
-    <span class="gnb-item" data-menu="about" onclick="toggleMenu('about',this)">협회소개</span>
-    <span class="gnb-item" data-menu="service" onclick="toggleMenu('service',this)">서비스</span>
-    <span class="gnb-item" data-menu="network" onclick="toggleMenu('network',this)">글로벌 네트워크</span>
-    <span class="gnb-item" data-menu="edu" onclick="toggleMenu('edu',this)">교육·취업</span>
-    <span class="gnb-item" data-menu="community" onclick="toggleMenu('community',this)">커뮤니티</span>
-    <span class="gnb-item" data-menu="member" onclick="toggleMenu('member',this)">회원·협약</span>
-    <span class="gnb-item ir-menu" onclick="showPage('ir');closeMenu()">IR센터</span>
-    <div class="gnb-dropdown" id="dd-about"><div class="dropdown-inner" style="grid-template-columns:repeat(5,1fr)"><div class="dropdown-col"><div class="dropdown-col-title">협회소개</div><span class="dropdown-link" onclick="showPage('about-intro')">협회소개</span><span class="dropdown-link" onclick="showPage('about-vision')">비전 &amp; 목표</span><span class="dropdown-link" onclick="showPage('about-history')">연혁</span><span class="dropdown-link" onclick="showPage('about-org')">조직도</span><span class="dropdown-link" onclick="showPage('about-location')">찾아오시는 길</span></div></div></div>
-    <div class="gnb-dropdown" id="dd-service"><div class="dropdown-inner" style="grid-template-columns:repeat(6,1fr)"><div class="dropdown-col"><div class="dropdown-col-title">서비스</div><span class="dropdown-link" onclick="showPage('svc-global')">글로벌 판로 개척</span><span class="dropdown-link" onclick="showPage('svc-edu')">MD 전문 교육</span><span class="dropdown-link" onclick="showPage('svc-buyer')">바이어 상담회</span><span class="dropdown-link" onclick="showPage('svc-ip')">IP 인증 지원</span><span class="dropdown-link" onclick="showPage('svc-imc')">IMC 통합 홍보</span><span class="dropdown-link" onclick="showPage('svc-startup')">창업·취업 연계</span></div></div></div>
-    <div class="gnb-dropdown" id="dd-network"><div class="dropdown-inner" style="grid-template-columns:repeat(3,1fr)"><div class="dropdown-col"><div class="dropdown-col-title">글로벌 네트워크</div><span class="dropdown-link" onclick="showPage('net-global')">글로벌 거점</span><span class="dropdown-link" onclick="showPage('net-buyer')">바이어 네트워크</span><span class="dropdown-link" onclick="showPage('net-mou')">MOU·협약 기관</span></div></div></div>
-    <div class="gnb-dropdown" id="dd-edu"><div class="dropdown-inner" style="grid-template-columns:repeat(4,1fr)"><div class="dropdown-col"><div class="dropdown-col-title">교육·취업</div><span class="dropdown-link" onclick="showPage('edu-onegate')">ONEGATE 과정</span><span class="dropdown-link" onclick="showPage('edu-schedule')">교육 일정</span><span class="dropdown-link" onclick="showPage('edu-apply')">교육 신청</span><span class="dropdown-link" onclick="showPage('edu-job')">취업 연계</span></div></div></div>
-    <div class="gnb-dropdown" id="dd-community"><div class="dropdown-inner" style="grid-template-columns:repeat(4,1fr)"><div class="dropdown-col"><div class="dropdown-col-title">커뮤니티</div><span class="dropdown-link" onclick="showPage('com-notice')">공지사항</span><span class="dropdown-link" onclick="showPage('com-news')">협회 소식</span><span class="dropdown-link" onclick="showPage('com-press')">언론·보도</span><span class="dropdown-link" onclick="showPage('com-faq')">자주 묻는 질문</span></div></div></div>
-    <div class="gnb-dropdown" id="dd-member"><div class="dropdown-inner" style="grid-template-columns:repeat(4,1fr)"><div class="dropdown-col"><div class="dropdown-col-title">회원·협약</div><span class="dropdown-link" onclick="showPage('mem-guide')">회원 가입 안내</span><span class="dropdown-link" onclick="showPage('mem-benefit')">회원 혜택</span><span class="dropdown-link" onclick="showPage('mem-partner')">협약 기관 신청</span><span class="dropdown-link" onclick="showPage('mem-apply')">신청 양식</span></div></div></div>
-  </div>
-  <div class="nav-right"><button onclick="showPage('home');closeMenu()">홈으로</button></div>
-</nav>folio</div>
-    <div class="slide-title">차세대<br><em>글로벌 자산</em> 투자</div>
-    <div class="slide-desc">KPop Reference IP, 뉴욕 상업부동산, 스트라이프 Pre-IPO까지<br>다양한 글로벌 포트폴리오를 한 곳에서.</div>
-    <div class="slide-tags"><span class="slide-tag">KPop Reference IP</span><span class="slide-tag">뉴욕 상업부동산</span><span class="slide-tag gold" onclick="showPage('ir')">IR센터 바로가기</span></div>
-  </div>
-  <div class="banner-dots" id="bannerDots"><span class="dot active" onclick="goSlide(0)"></span><span class="dot" onclick="goSlide(1)"></span><span class="dot" onclick="goSlide(2)"></span></div>
-  <span class="banner-prev" onclick="prevSlide()">&#8249;</span>
-  <span class="banner-next" onclick="nextSlide()">&#8250;</span>
-</div>
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">2014</div><div class="stat-label">설립연도</div></div>
-  <div class="stat-item"><div class="stat-num">2,400+</div><div class="stat-label">누적 수출 기업 지원</div></div>
-  <div class="stat-item"><div class="stat-num">38</div><div class="stat-label">글로벌 바이어 네트워크 국가</div></div>
-  <div class="stat-item"><div class="stat-num">1,200억+</div><div class="stat-label">누적 수출 실적</div></div>
-</div>
-<div class="focus-banner"><div class="focus-inner">
-  <div class="focus-card"><div class="focus-label">Highlight</div><div class="focus-title">2024 글로벌 바이어 상담회</div><div class="focus-sub">국내 우수 중소기업과 해외 바이어를 직접 연결</div><span class="focus-cta" onclick="showPage('svc-buyer')">신청하기 →</span></div>
-  <div class="focus-card"><div class="focus-label">Program</div><div class="focus-title">ONEGATE MD 전문과정</div><div class="focus-sub">대형 유통사 MD 출신 강사진 직접 진행</div><span class="focus-cta" onclick="showPage('edu-onegate')">교육 신청 →</span></div>
-</div></div>
-<div class="section services-section"><div class="section-inner">
-  <div class="section-eyebrow">Our Services</div><div class="section-title">국제MD협회 핵심 서비스</div>
-  <div class="services-grid">
-    <div class="service-card" onclick="showPage('svc-global')"><span class="service-num">01</span><div class="service-name">글로벌 판로 개척</div><div class="service-desc">알리바바, JD닷컴 등 글로벌 플랫폼 입점 및 D2C 라이브커머스 연계</div></div>
-    <div class="service-card" onclick="showPage('svc-edu')"><span class="service-num">02</span><div class="service-name">MD 전문 교육</div><div class="service-desc">ONEGATE 과정으로 실전 MD 역량 체계적 교육</div></div>
-    <div class="service-card" onclick="showPage('svc-buyer')"><span class="service-num">03</span><div class="service-name">글로벌 바이어 상담회</div><div class="service-desc">38개국 바이어 네트워크 직접 매칭</div></div>
-    <div class="service-card" onclick="showPage('svc-ip')"><span class="service-num">04</span><div class="service-name">IP 인증 지원</div><div class="service-desc">해외 지식재산권 등록 및 인증</div></div>
-    <div class="service-card" onclick="showPage('svc-imc')"><span class="service-num">05</span><div class="service-name">IMC 통합 홍보</div><div class="service-desc">온·오프라인 통합 마케팅</div></div>
-    <div class="service-card" onclick="showPage('svc-startup')"><span class="service-num">06</span><div class="service-name">창업·취업 연계</div><div class="service-desc">창업 컨설팅 및 취업 연계</div></div>
-  </div>
-</div></div>
-<div class="section network-section"><div class="section-inner">
-  <div class="section-eyebrow">Global Network</div><div class="section-title">글로벌 네트워크</div>
-  <div class="network-map"><div class="world-graphic"><div class="globe-ring"></div><div class="globe-ring"></div><div class="globe-ring"></div><div class="globe-center">IMD</div></div></div>
-  <div class="regions-grid">
-    <div class="region-card"><div class="region-name">아시아</div><div class="region-count">18</div><div class="region-unit">개국 거점</div></div>
-    <div class="region-card"><div class="region-name">유럽</div><div class="region-count">9</div><div class="region-unit">개국 거점</div></div>
-    <div class="region-card"><div class="region-name">미주</div><div class="region-count">7</div><div class="region-unit">개국 거점</div></div>
-    <div class="region-card"><div class="region-name">아프리카·중동</div><div class="region-count">4</div><div class="region-unit">개국 거점</div></div>
-  </div>
-</div></div>
-<div class="section news-section"><div class="section-inner">
-  <div class="news-grid">
-    <div><div class="news-col-title">공지사항</div>
-      <div class="news-item" onclick="showPage('com-notice')"><div class="news-date">2024.11.20</div><div class="news-text">2024 바이어 상담회 참가기업 모집<span class="news-new">N</span></div></div>
-      <div class="news-item" onclick="showPage('com-notice')"><div class="news-date">2024.11.15</div><div class="news-text">IMD×SPECFIN 투자펀드 협력협약<span class="news-new">N</span></div></div>
-    </div>
-    <div><div class="news-col-title">행사·교육 일정</div>
-      <div class="news-item"><div class="news-date">2024.12.05</div><div class="news-text">2024 연말 회원 네트워킹 데이<span class="news-new">N</span></div></div>
+<header id="hd" class="onhero">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/mark.png" alt="국제MD협회">
+      <span><b data-cn="国际MD协会" data-en="IMD ASSOCIATION">국제MD협회</b><i>Since 2002</i></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about"   data-cn="协会概况" data-en="About">협회 소개</a>
+      <a href="#inbound" data-cn="外国游客引流" data-en="Inbound">외국인 모객</a>
+      <a href="#trade"   data-cn="商品流通" data-en="Trade">상품 유통</a>
+      <a href="#center"  data-cn="批发流通中心" data-en="Centers">유통센터</a>
+      <a href="#history" data-cn="发展历程" data-en="History">연혁</a>
+      <a href="#news"    data-cn="动态" data-en="News">활동</a>
+      <a href="#contact" data-cn="联系" data-en="Contact">문의</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="lang">
+        <button data-l="ko" class="on">KO</button><button data-l="cn">中文</button><button data-l="en">EN</button>
+      </div>
+      <button class="burger" id="bg" aria-label="menu"><span></span><span></span><span></span></button>
     </div>
   </div>
-</div></div>
-<div class="quick-section"><div class="quick-inner"><div class="quick-title">바로가기</div>
-  <div class="quick-links">
-    <span class="quick-link" onclick="showPage('mem-join')">회원 가입</span>
-    <span class="quick-link" onclick="showPage('svc-buyer')">바이어 상담회 신청</span>
-    <span class="quick-link" onclick="showPage('edu-apply')">MD 교육 신청</span>
-    <span class="quick-link" onclick="showPage('ir')">IR센터 투자 문의</span>
-  </div>
-</div></div>
-<div class="activity-section"><div class="section-inner">
-  <div class="section-eyebrow">Real Activities</div><div class="section-title">10년, 현장에서 증명한 실적</div>
-  <div class="photo-masonry">
-    <div class="photo-item tall" style="height:340px"><img src="https://picsum.photos/seed/mou/800/450" alt="서울시 MOU"><div class="photo-label">서울시 일자리 창출 업무협약식</div></div>
-    <div class="photo-item" style="height:168px"><img src="https://picsum.photos/seed/buyer/800/450" alt="바이어 상담"><div class="photo-label">글로벌 바이어 1:1 매칭 상담</div></div>
-    <div class="photo-item" style="height:168px"><img src="https://picsum.photos/seed/award/800/450" alt="AWARDS"><div class="photo-label">2015 한류중심 AWARDS 수상</div></div>
-    <div class="photo-item" style="height:168px"><img src="https://picsum.photos/seed/alibaba/800/450" alt="알리바바"><div class="photo-label">알리바바 파트너십</div></div>
-    <div class="photo-item" style="height:168px"><img src="https://picsum.photos/seed/shanghai/800/450" alt="상하이"><div class="photo-label">상하이 D2C 라이브커머스</div></div>
-    <div class="photo-item" style="height:168px"><img src="https://picsum.photos/seed/japan/800/450" alt="일본"><div class="photo-label">일본 ALTA 입점</div></div>
-  </div>
-</div></div>
-<div class="proof-section"><div class="section-inner">
-  <div class="section-eyebrow">Verified Track Record</div><div class="section-title">공인된 신뢰의 증거</div>
-  <div class="proof-grid">
-    <div class="proof-card"><img src="https://picsum.photos/seed/permit/450/600" alt="신허가증"><div class="proof-card-body"><div class="proof-card-tag">OFFICIAL·2017</div><div class="proof-card-title">산통부 법인설립 허가</div></div></div>
-    <div class="proof-card"><img src="https://picsum.photos/seed/hiseoul/800/450" alt="Hi-Seoul"><div class="proof-card-body"><div class="proof-card-tag">AWARD·SEOUL</div><div class="proof-card-title">Hi-Seoul Award Gallery</div></div></div>
-    <div class="proof-card"><img src="https://picsum.photos/seed/award/800/450" alt="AWARDS"><div class="proof-card-body"><div class="proof-card-tag">AWARD·2015</div><div class="proof-card-title">2015 한류중심 AWARDS</div></div></div>
-    <div class="proof-card"><img src="https://picsum.photos/seed/news/1200/800" alt="언론보도"><div class="proof-card-body"><div class="proof-card-tag">PRESS·2019</div><div class="proof-card-title">중국 제1재경일보</div></div></div>
-  </div>
-</div></div>
-<div class="partners-section"><div class="partners-inner"><div class="partners-label">협약·협력 기관</div>
-  <div class="partner-list">
-    <span class="partner-tag">산업통상자원부</span><span class="partner-tag">서울특별시</span><span class="partner-tag">서울산업진흥원</span><span class="partner-tag">알리바바</span><span class="partner-tag">JD닷컴</span><span class="partner-tag">일본 ALTA</span><span class="partner-tag">SPECFIN</span>
-  </div>
-</div></div>
-</div>대한민국 우수 중소기업의 글로벌 판로 개척과 MD 전문 인재 양성을 핵심 사명으로 합니다.</p>
-      <p style="font-size:13.5px;color:#555;line-height:1.9;margin-top:12px">38개국 바이어 네트워크와 국내외 유통사·플랫폼과의 긴밀한 협력을 통해 수출 초보 기업부터 글로벌 브랜드까지 맞춤형 솔루션을 제공합니다.</p>
-      <div style="margin-top:28px;display:flex;gap:12px">
-        <span class="cta-btn" onclick="showPage('about-vision')">비전 보기</span>
-        <span class="cta-btn-outline" onclick="showPage('svc-global')">서비스 안내</span>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="bg"></div><div class="ov"></div>
+  <div class="in">
+    <div class="wrap">
+      <p class="kick" data-cn="韩国产业通商资源部主管 社团法人 · 2002年起" data-en="Non-profit corporation · Ministry of Trade, Industry and Energy · Since 2002">산업통상자원부 소관 사단법인 · Since 2002</p>
+      <h1 data-cn="把外国客人<em>带进</em>韩国的门店，<br>把韩国商品<em>送上</em>世界的货架。" data-en="Foreign customers <em>into</em> Korean stores.<br>Korean products <em>onto</em> the world's shelves.">외국인을 한국의 <em>매장</em>으로,<br>한국 상품을 세계의 <em>매대</em>로.</h1>
+      <p class="sub" data-cn="协会只做三件事。把外国客人引流到韩国的百货店、免税店、医疗机构、门店与餐厅；把韩国商品卖到国内与海外；在韩国与海外直接运营批发流通中心。" data-en="The association does three things. It brings foreign visitors into Korean department stores, duty free shops, clinics, shops and restaurants. It sells Korean products at home and abroad. And it runs wholesale distribution centers in Korea and overseas.">협회가 하는 일은 세 가지입니다. 외국인을 한국의 백화점·면세점·병원·매장·식당으로 모객하고, 한국 상품을 국내와 해외에 팔고, 전국과 해외에서 홀세일 유통센터를 직접 운영합니다.</p>
+      <div class="acts">
+        <a class="btn solid" href="#contact" data-cn="洽谈合作" data-en="Start a partnership">제휴 상담 신청</a>
+        <a class="btn" href="#about" data-cn="了解三项业务" data-en="See the three">세 가지 보기</a>
       </div>
     </div>
-    <div style="background:linear-gradient(135deg,#010d2e,#002060);padding:48px;text-align:center;border:1px solid rgba(200,169,74,0.2)">
-      <div style="font-size:48px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1">2014</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:8px;letter-spacing:2px">ESTABLISHED</div>
-      <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:center">
-        <div style="background:rgba(255,255,255,0.05);padding:20px 12px"><div style="font-size:26px;font-weight:700;color:#F0C030">2,400+</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px">지원 기업</div></div>
-        <div style="background:rgba(255,255,255,0.05);padding:20px 12px"><div style="font-size:26px;font-weight:700;color:#F0C030">38</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px">네트워크 국가</div></div>
-        <div style="background:rgba(255,255,255,0.05);padding:20px 12px"><div style="font-size:26px;font-weight:700;color:#F0C030">1,200억+</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px">수출 실적</div></div>
-        <div style="background:rgba(255,255,255,0.05);padding:20px 12px"><div style="font-size:26px;font-weight:700;color:#F0C030">12+</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px">교육 기수</div></div>
+    <div class="wrap" style="padding-bottom:0">
+      <div class="hbar">
+        <div><div class="n">2.2<i data-cn="亿名" data-en="hundred million">억 명</i></div><div class="t" data-cn="引流对象的外国游客规模" data-en="The pool of foreign visitors we work to reach">모객 대상 외국인 규모</div></div>
+        <div><div class="n">35,000<i>SKU</i></div><div class="t" data-cn="累计供应至流通渠道的韩国商品" data-en="Korean products supplied to retail channels">유통채널에 공급한 한국 상품</div></div>
+        <div><div class="n">5<i data-cn="个据点" data-en="offices">개 거점</i></div><div class="t" data-cn="首尔 · 阿拉巴马 · 洛杉矶 · 上海 · 杭州" data-en="Seoul · Alabama · LA · Shanghai · Hangzhou">서울 · 알라바마 · LA · 상하이 · 항저우</div></div>
       </div>
     </div>
   </div>
-  <div class="section-divider"></div>
-  <div class="card-grid">
-    <div class="card"><div class="card-num">신뢰 Trust</div><div class="card-title">믿을 수 있는 파트너</div><div class="card-desc">10년 이상 글로벌 무역·유통 경험과 검증된 네트워크를 바탕으로</div></div>
-    <div class="card"><div class="card-num">전문성 Expertise</div><div class="card-title">현장 전문가 집단</div><div class="card-desc">대형 유통사 MD 출신, 글로벌 바이어 네트워크 전문가로 구성</div></div>
-    <div class="card"><div class="card-num">성과 Result</div><div class="card-title">실질적 수출 성과</div><div class="card-desc">실제 수출 계약 성사와 매출 증가로 이어지는 결과 중심</div></div>
-  </div>
-</div></div></div>
+</section>
 
-<!-- 비전 & 목표 -->
-<div id="page-about-vision" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">Vision &amp; Mission</div>
-  <div class="hero-title">비전 &amp; 목표</div>
-  <div class="hero-desc">글로벌 MD 생태계를 선도하는 국제MD협회의 비전과 전략 목표</div>
-</div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('about-intro')">협회소개</span>
-  <span class="subnav-item active">비전 &amp; 목표</span>
-  <span class="subnav-item" onclick="showPage('about-history')">연혁</span>
-  <span class="subnav-item" onclick="showPage('about-org')">조직도</span>
-  <span class="subnav-item" onclick="showPage('about-location')">찾아오시는 길</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="highlight-box">
-    <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#C8A94A;margin-bottom:16px">OUR VISION</div>
-    <div class="highlight-box-title" style="font-size:28px">"글로벌 MD 생태계를 선도하는<br>대한민국 최고의 무역·유통 전문 기관"</div>
-    <div class="highlight-box-desc">2030년까지 아시아 최대 MD 전문 협회로 도약, 대한민국 중소기업의 글로벌 경쟁력 강화에 기여</div>
+<div class="trust">
+  <div class="wrap">
+    <span data-cn="设立许可 第2017-19号" data-en="Licence No. 2017-19">설립허가 제2017-19호</span>
+    <span class="dot">·</span>
+    <span data-cn="《民法》第32条 非营利法人" data-en="Non-profit under Civil Act Art. 32">「민법」 제32조 비영리법인</span>
+    <span class="dot">·</span>
+    <span data-cn="正式会员 150余名" data-en="150 full members">정회원 150여 명</span>
+    <span class="dot">·</span>
+    <b>imd.or.kr</b>
   </div>
-  <div class="card-grid" style="margin-top:40px">
-    <div class="card"><div class="card-num">Goal 01 · 2025</div><div class="card-title">수출 지원 기업 5,000사</div></div>
-    <div class="card"><div class="card-num">Goal 02 · 2026</div><div class="card-title">글로벌 거점 50개국</div></div>
-    <div class="card"><div class="card-num">Goal 03 · 2027</div><div class="card-title">MD 전문 인재 1만 명</div></div>
-  </div>
-</div></div></div>
+</div>
 
-<!-- 연혁 -->
-<div id="page-about-history" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">History</div><div class="hero-title">연혁</div>
-</div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('about-intro')">협회소개</span>
-  <span class="subnav-item" onclick="showPage('about-vision')">비전 &amp; 목표</span>
-  <span class="subnav-item active">연혁</span>
-  <span class="subnav-item" onclick="showPage('about-org')">조직도</span>
-  <span class="subnav-item" onclick="showPage('about-location')">찾아오시는 길</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="timeline">
-    <div class="tl-item major"><div class="tl-year">2024</div><div class="tl-title">IMD×SPECFIN 글로벌 투자펀드 협력협약</div></div>
-    <div class="tl-item"><div class="tl-year">2022</div><div class="tl-title">SBA 공식 협력 기관 지정, 알리바바 파트너십</div></div>
-    <div class="tl-item major"><div class="tl-year">2020</div><div class="tl-title">일본 ALTA, 상해외국어대 MOU 체결</div></div>
-    <div class="tl-item"><div class="tl-year">2018</div><div class="tl-title">ONEGATE MD 전문과정 론칭</div></div>
-    <div class="tl-item major"><div class="tl-year">2014</div><div class="tl-title">사단법인 국제MD협회 설립</div></div>
-  </div>
-</div></div></div>
-
-<!-- 조직도 -->
-<div id="page-about-org" class="page">
-<div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Organization</div><div class="hero-title">조직도</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('about-intro')">협회소개</span>
-  <span class="subnav-item" onclick="showPage('about-vision')">비전</span>
-  <span class="subnav-item" onclick="showPage('about-history')">연혁</span>
-  <span class="subnav-item active">조직도</span>
-  <span class="subnav-item" onclick="showPage('about-location')">찾아오시는 길</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div style="text-align:center;margin-bottom:48px">
-    <div style="display:inline-block;background:var(--navy);color:#fff;padding:16px 48px;font-size:16px;font-weight:700;margin-bottom:24px">이사장</div>
-    <div style="display:flex;justify-content:center;gap:24px;margin-bottom:24px">
-      <div style="background:#f5f7fc;border:1px solid #e8ecf2;padding:12px 28px;font-size:13px">이사회</div>
-      <div style="background:#f5f7fc;border:1px solid #e8ecf2;padding:12px 28px;font-size:13px">감사위원회</div>
-      <div style="background:#f5f7fc;border:1px solid #e8ecf2;padding:12px 28px;font-size:13px">자문위원회</div>
+<!-- ============ 01 ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow rv">01 — About</p>
+    <div class="split">
+      <div class="rv">
+        <h2 class="sec" data-cn="我们只做<br>三件事。" data-en="We do three things.<br>Only three.">우리는 세 가지만<br>합니다.</h2>
+        <div class="rule-s" style="margin-top:26px"></div>
+        <p class="lead" data-cn="2002年，百货店与电视购物一线的商品企划师们聚在一起，开始共享各自的货架与交易渠道。二十余年后，协会把这些工作收敛成三件：把客人带进来，把商品送出去，再亲自撑住货架。其余的都舍掉了。" data-en="In 2002, merchandisers from department stores and home shopping networks began sharing their shelves and their buyers. Two decades on, the association has narrowed that work to three things: bring the customer in, send the product out, and hold the shelf itself. Everything else has been set aside.">2002년, 백화점과 홈쇼핑 현장에서 상품을 책임지던 사람들이 서로의 매대와 거래선을 나누기 시작했습니다. 20여 년이 지난 지금, 협회는 그 일을 세 가지로 좁혔습니다. 손님을 데려오고, 상품을 내보내고, 그 매대를 직접 지킵니다. 나머지는 덜어냈습니다.</p>
+      </div>
+      <div class="rv">
+        <div class="ph" style="aspect-ratio:4/3"><img src="assets/showroom2.jpg" alt="협회가 운영하는 유통센터" loading="lazy"></div>
+        <p class="cap" data-cn="协会运营的批发流通中心 — 会员企业商品实际陈列的位置" data-en="A wholesale center the association runs — where member products actually sit">협회가 운영하는 유통센터 — 회원사 상품이 실제로 놓이는 자리</p>
+      </div>
     </div>
-    <div style="display:inline-block;background:#003087;color:#fff;padding:12px 40px;font-size:14px;font-weight:700;margin-bottom:20px">사무국장</div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:800px;margin:0 auto">
-      <div style="background:rgba(0,32,96,0.06);padding:12px;font-size:12px;font-weight:600;color:var(--navy)">글로벌사업팀</div>
-      <div style="background:rgba(0,32,96,0.06);padding:12px;font-size:12px;font-weight:600;color:var(--navy)">교육사업팀</div>
-      <div style="background:rgba(0,32,96,0.06);padding:12px;font-size:12px;font-weight:600;color:var(--navy)">회원지원팀</div>
-      <div style="background:rgba(0,32,96,0.06);padding:12px;font-size:12px;font-weight:600;color:var(--navy)">IR·홍보팀</div>
+
+    <div class="three rv">
+      <a href="#inbound">
+        <div class="no">01</div>
+        <h3 data-cn="把外国客人<br>带进韩国的门店" data-en="Bring foreign customers<br>into Korean stores">외국인을<br>한국의 매장으로</h3>
+        <p data-cn="通过与VISA中国的联动，把外国游客引流到百货店、免税店、医疗机构、路面店与餐厅，让这笔消费留在韩国。" data-en="Through the VISA China linkage we route foreign visitors into department stores, duty free shops, clinics, street-level shops and restaurants, so the spending stays in Korea.">비자차이나 연계를 통해 외국인 관광객을 백화점·면세점·병원·로드숍·식당으로 보냅니다. 그 소비가 한국에 남도록 하는 일입니다.</p>
+        <span class="ar" data-cn="查看 →" data-en="See →">자세히 →</span>
+      </a>
+      <a href="#trade">
+        <div class="no">02</div>
+        <h3 data-cn="把韩国商品<br>卖到国内与海外" data-en="Sell Korean products<br>at home and abroad">한국 상품을<br>국내와 해외로</h3>
+        <p data-cn="为会员企业的商品找到该放的位置 — 百货店、电视购物、线上商城、直播电商，以及中国、日本、美国的渠道。" data-en="We find where a member's product belongs — department stores, home shopping, online malls, live commerce, and channels in China, Japan and the United States.">회원사 상품이 놓일 자리를 찾습니다. 백화점·홈쇼핑·온라인몰·라이브커머스, 그리고 중국·일본·미국의 채널입니다.</p>
+        <span class="ar" data-cn="查看 →" data-en="See →">자세히 →</span>
+      </a>
+      <a href="#center">
+        <div class="no">03</div>
+        <h3 data-cn="在韩国与海外<br>运营批发流通中心" data-en="Run wholesale centers<br>in Korea and overseas">홀세일 유통센터를<br>전국과 해외에</h3>
+        <p data-cn="不只是介绍渠道，而是亲自运营货架。批发交易、买家对接与MD培训都在同一个空间里完成。" data-en="We do not merely introduce a channel; we run the shelf. Wholesale trade, buyer matching and MD training happen in one space.">채널을 소개하는 데 그치지 않고 매대를 직접 운영합니다. 홀세일 거래와 바이어 매칭, MD 교육이 한 공간에서 이루어집니다.</p>
+        <span class="ar" data-cn="查看 →" data-en="See →">자세히 →</span>
+      </a>
     </div>
-  </div>
-</div></div></div>
-<!-- 찾아오시는 길 -->
-<div id="page-about-location" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">Location</div><div class="hero-title">찾아오시는 길</div>
-  <div class="hero-desc">국제MD협회 사무국 위치 및 오시는 방법을 안내합니다.</div>
-</div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('about-intro')">협회소개</span>
-  <span class="subnav-item" onclick="showPage('about-vision')">비전</span>
-  <span class="subnav-item" onclick="showPage('about-history')">연혁</span>
-  <span class="subnav-item" onclick="showPage('about-org')">조직도</span>
-  <span class="subnav-item active">찾아오시는 길</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="map-container">
-    <div class="map-placeholder">
-      <p>📍 서울시 마포구 양화로 15길 12, 인쇄문화회관 2층</p>
-      <a href="https://map.naver.com" target="_blank" style="background:#002060;color:#fff;padding:8px 20px;margin-top:12px;display:inline-block;font-size:12px">네이버 지도로 보기</a>
-    </div>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
-    <div>
-      <div class="info-row"><div class="info-label">주소</div><div class="info-value">서울특별시 마포구 양화로 15길 12<br>인쇄문화회관 2층 (우: 04058)</div></div>
-      <div class="info-row"><div class="info-label">전화</div><div class="info-value">02-2088-2269</div></div>
-      <div class="info-row"><div class="info-label">이메일</div><div class="info-value">info@imd-global.or.kr</div></div>
-      <div class="info-row"><div class="info-label">업무시간</div><div class="info-value">월~금 09:00–18:00</div></div>
-    </div>
-    <div>
-      <div class="info-row"><div class="info-label">지하철</div><div class="info-value">2호선 합정역 7번출구 5분</div></div>
-      <div class="info-row"><div class="info-label">버스</div><div class="info-value">272, 570, 606번</div></div>
-    </div>
-  </div>
-</div></div></div>
 
-<!-- svc-global -->
-<div id="page-svc-global" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">Service 01</div><div class="hero-title">글로벌 판로 개척</div>
-  <div class="hero-desc">알리바바, JD닷컴, 홈쇼핑, D2C 라이브커머스 — 중소기업의 해외 유통 채널 진입 지원</div>
-</div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item active">글로벌 판로 개척</span>
-  <span class="subnav-item" onclick="showPage('svc-edu')">MD 전문 교육</span>
-  <span class="subnav-item" onclick="showPage('svc-buyer')">바이어 상담회</span>
-  <span class="subnav-item" onclick="showPage('svc-ip')">IP 인증</span>
-  <span class="subnav-item" onclick="showPage('svc-imc')">IMC 홍보</span>
-  <span class="subnav-item" onclick="showPage('svc-startup')">창업·취업</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="step-list">
-    <div class="step-item"><div class="step-num">01</div><div class="step-title">진단·분석</div><div class="step-desc">비즈니스 역량 종합 진단</div></div>
-    <div class="step-item"><div class="step-num">02</div><div class="step-title">채널 선정</div><div class="step-desc">최적 유통 채널 및 진출 전략 수립</div></div>
-    <div class="step-item"><div class="step-num">03</div><div class="step-title">입점 지원</div><div class="step-desc">서류 준비, 플랫폼 등록, 상품페이지 최적화</div></div>
-    <div class="step-item"><div class="step-num">04</div><div class="step-title">운영·성과</div><div class="step-desc">매출 모니터링 및 채널 확장</div></div>
-  </div>
-  <div class="section-divider"></div>
-  <div class="global-photos">
-    <div><img src="https://picsum.photos/seed/store/800/450" alt="K뷰티 매장"><div class="global-photo-caption">중국 알리바바 K뷰티 매장</div></div>
-    <div><img src="https://picsum.photos/seed/japan/800/450" alt="ALTA"><div class="global-photo-caption">일본 ALTA 편의점 입점</div></div>
-    <div><img src="https://picsum.photos/seed/shanghai/800/450" alt="D2C"><div class="global-photo-caption">상하이 D2C 스튜디오</div></div>
-  </div>
-  <div style="text-align:center;margin-top:48px">
-    <span class="cta-btn" onclick="showPage('mem-apply')">수출 컨설팅 신청하기</span>
-  </div>
-</div></div></div>
-
-<!-- svc-edu -->
-<div id="page-svc-edu" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">Service 02</div><div class="hero-title">MD 전문 교육</div>
-  <div class="hero-desc">ONEGATE MD 전문과정 — 현직 유통사 MD 출신 강사진이 직접 가르치는 실전형 교육</div>
-</div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('svc-global')">글로벌 판로</span>
-  <span class="subnav-item active">MD 전문 교육</span>
-  <span class="subnav-item" onclick="showPage('svc-buyer')">바이어 상담회</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="card-grid">
-    <div class="card"><div class="card-num">Module 01</div><div class="card-title">유통 구조 이해</div><div class="card-desc">국내외 유통 채널 구조, MD의 역할과 책임</div></div>
-    <div class="card"><div class="card-num">Module 02</div><div class="card-title">상품 기획 & 소싱</div><div class="card-desc">시장 트렌드 분석, 상품 기획 방법론</div></div>
-    <div class="card"><div class="card-num">Module 03</div><div class="card-title">글로벌 플랫폼 실무</div><div class="card-desc">알리바바, 아마존, 쇼피 등 주요 플랫폼 입점 실무</div></div>
-    <div class="card"><div class="card-num">Module 04</div><div class="card-title">MD 협상 & 계약</div><div class="card-desc">바이어와의 협상 전략, 수출 계약서 작성</div></div>
-    <div class="card"><div class="card-num">Module 05</div><div class="card-title">온라인 마케팅</div><div class="card-desc">SNS, 라이브커머스, 콘텐츠 제작 기초</div></div>
-    <div class="card"><div class="card-num">Module 06</div><div class="card-title">취업 연계</div><div class="card-desc">수료 후 협력 기업 취업 연계 및 창업 멘토링</div></div>
-  </div>
-  <div style="text-align:center;margin-top:40px">
-    <span class="cta-btn" onclick="showPage('edu-apply')">교육 신청하기</span>
-  </div>
-</div></div></div>
-
-<!-- svc-buyer -->
-<div id="page-svc-buyer" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">Service 03</div><div class="hero-title">글로벌 바이어 상담회</div>
-  <div class="hero-desc">38개국 검증된 바이어와 직접 만나는 국제MD협회 B2B 매칭 프로그램</div>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="card-grid">
-    <div class="card"><div class="card-num">대상 국가</div><div class="card-title">아시아태평양, 중동, 유럽</div><div class="card-desc">38개국 중소매, 홈쇼핑, 주요 백화점 바이어 라인업</div></div>
-    <div class="card"><div class="card-num">진행 방식</div><div class="card-title">오오프라인 1:1 매칭</div><div class="card-desc">상담회 형식으로 바이어와 직접 방얨 및 샘플 검토</div></div>
-    <div class="card"><div class="card-num">참가 조건</div><div class="card-title">협회원사 우선</div><div class="card-desc">협회원사에게 우선 참가 헤택 및 할인된 수수료</div></div>
-  </div>
-  <div style="text-align:center;margin-top:40px">
-    <span class="cta-btn" onclick="showPage('mem-apply')">바이어 상담회 신청하기</span>
-  </div>
-</div></div></div>
-
-<!-- svc-ip, svc-imc, svc-startup 간략 버전 -->
-<div id="page-svc-ip" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Service 04</div><div class="hero-title">IP 인증 지원</div><div class="hero-desc">해외 시장 진입에 필수적인 지식재산권 등록 및 인증 취득 전문 지원</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner"><div class="section-eyebrow">IP Certification</div><div class="section-title">IP 인증 지원 서비스</div><div class="section-sub">상표, 디자인, 특허 등 IP를 보호하여 해외 시장에서 안전하게 비즈니스하세요.</div></div></div></div>
-<div id="page-svc-imc" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Service 05</div><div class="hero-title">IMC 통합 홍보</div><div class="hero-desc">온·오프라인 통합 마케팅으로 브랜드 글로벌 인지도 구축</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner"><div class="section-eyebrow">IMC</div><div class="section-title">IMC 통합 홍보 서비스</div></div></div></div>
-<div id="page-svc-startup" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Service 06</div><div class="hero-title">창업·취업 연계</div><div class="hero-desc">글로벌 무역·유통 분야 창업 컨설팅과 우수 기업 취업 연계</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner"><div class="section-eyebrow">Startup</div><div class="section-title">창업·취업 연계 서비스</div></div></div></div>
-<!-- 글로벌 네트워크 -->
-<div id="page-net-global" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Network</div><div class="hero-title">글로벌 거점</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="partner-grid">
-    <div class="partner-item">중국(알리바바, JD닷컴)</div>
-    <div class="partner-item">일본(ALTA)</div>
-    <div class="partner-item">미국(아마존)</div>
-    <div class="partner-item">독일(점속)</div>
-    <div class="partner-item">영국(에쇼스)</div>
-    <div class="partner-item">낙트(쇼피)</div>
-    <div class="partner-item">싱가포르</div>
-    <div class="partner-item">UAE 지역</div>
-    <div class="partner-item">말레이시아</div>
-    <div class="partner-item">캐나다</div>
-  </div>
-</div></div></div>
-
-<div id="page-net-buyer" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Buyer Network</div><div class="hero-title">바이어 네트워크</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="section-sub">38개국 검증된 바이어들과의 네트워크를 통해 수출 기회를 만들어드립니다.</div>
-  <div class="card-grid">
-    <div class="card"><div class="card-num">아시아</div><div class="card-title">18개국 바이어</div><div class="card-desc">중국, 일본, 낙트, 싱가포르 등 주요 바이어 라인업 보유</div></div>
-    <div class="card"><div class="card-num">유럽</div><div class="card-title">9개국 바이어</div><div class="card-desc">독일, 영국, 프랑스 등 주요 마켓들 바이어 확보</div></div>
-    <div class="card"><div class="card-num">미주</div><div class="card-title">7개국 바이어</div><div class="card-desc">미국, 캐나다, 동브라질 등 주요 보도 및 소매 바이어</div></div>
-  </div>
-</div></div></div>
-
-<div id="page-net-mou" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">MOU</div><div class="hero-title">MOU·협약 기관</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="partner-grid">
-    <div class="partner-item">산업통상자원부</div>
-    <div class="partner-item">서울특별시</div>
-    <div class="partner-item">광주광역시</div>
-    <div class="partner-item">대전광역시</div>
-    <div class="partner-item">서울산업진흥원</div>
-    <div class="partner-item">NHN고도</div>
-    <div class="partner-item">일본 ALTA</div>
-    <div class="partner-item">상해외국어대</div>
-    <div class="partner-item">알리바바 코리아</div>
-    <div class="partner-item">SPECFIN</div>
-  </div>
-</div></div></div>
-
-<!-- 교육 페이지들 -->
-<div id="page-edu-onegate" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Education</div><div class="hero-title">ONEGATE 과정</div><div class="hero-desc">대형 유통사 MD 출신 전문가가 직접 가르치는 실전형 MD 역량 강화 교육</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item active">ONEGATE 과정</span>
-  <span class="subnav-item" onclick="showPage('edu-schedule')">교육 일정</span>
-  <span class="subnav-item" onclick="showPage('edu-apply')">교육 신청</span>
-  <span class="subnav-item" onclick="showPage('edu-job')">취업 연계</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="stat-grid">
-    <div class="stat-box"><div class="stat-box-num">13<span class="stat-box-unit">기+</span></div><div class="stat-box-label">누적 기수</div></div>
-    <div class="stat-box"><div class="stat-box-num">8<span class="stat-box-unit">주</span></div><div class="stat-box-label">과정 기간</div></div>
-    <div class="stat-box"><div class="stat-box-num">20<span class="stat-box-unit">시간</span></div><div class="stat-box-label">총 수업시간</div></div>
-    <div class="stat-box"><div class="stat-box-num">90<span class="stat-box-unit">%+</span></div><div class="stat-box-label">취업연계률</div></div>
-  </div>
-  <div class="card-grid">
-    <div class="card"><div class="card-num">Module 01</div><div class="card-title">유통 구조 이해</div><div class="card-desc">MD의 역할, 책임, 시장 구조 이해</div></div>
-    <div class="card"><div class="card-num">Module 02</div><div class="card-title">상품 기획 & 소싱</div><div class="card-desc">시장 트렌드 분석, 상품 기획서 작성</div></div>
-    <div class="card"><div class="card-num">Module 03</div><div class="card-title">글로벌 플랫폼</div><div class="card-desc">알리바바, 아마존, 쇼피 입점 실무</div></div>
-    <div class="card"><div class="card-num">Module 04</div><div class="card-title">MD 협상 & 계약</div><div class="card-desc">바이어 협상, 수출 계약서 작성</div></div>
-    <div class="card"><div class="card-num">Module 05</div><div class="card-title">온라인 마케팅</div><div class="card-desc">SNS, 라이브커머스, 콘텐츠 제작</div></div>
-    <div class="card"><div class="card-num">Module 06</div><div class="card-title">취업 연계</div><div class="card-desc">수료 후 기업 취업 및 창업 멘토링</div></div>
-  </div>
-</div></div></div>
-
-<div id="page-edu-schedule" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Schedule</div><div class="hero-title">교육 일정</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('edu-onegate')">ONEGATE 과정</span>
-  <span class="subnav-item active">교육 일정</span>
-  <span class="subnav-item" onclick="showPage('edu-apply')">교육 신청</span>
-  <span class="subnav-item" onclick="showPage('edu-job')">취업 연계</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="tbl-wrap" style="overflow-x:auto">
-    <table class="tbl" style="min-width:700px">
-      <thead><tr><th>교육명</th><th>기간</th><th>시간</th><th>정원</th><th>수강료</th><th>상태</th></tr></thead>
-      <tbody>
-        <tr><td>ONEGATE MD 13기</td><td>2024.12 시작</td><td>주 2회, 전 8회</td><td>20명</td><td>450,000원</td><td><span class="badge badge-green">모집중</span></td></tr>
-        <tr><td>D2C 라이브커머스 워크샵</td><td>2024.11.28</td><td>일회 4시간</td><td>30명</td><td>무료</td><td><span class="badge badge-blue">수강 중</span></td></tr>
-        <tr><td>홈쇼핑 MD 입점 세미나</td><td>2024.11.20</td><td>2시간</td><td>제한 없음</td><td>무료</td><td><span class="badge badge-gold">연장온라인</span></td></tr>
-      </tbody>
+    <table class="info rv">
+      <tr><th data-cn="法人名称" data-en="Legal name">법인명</th><td>사단법인 국제MD협회 &nbsp;·&nbsp; Association of International Merchandisers &nbsp;·&nbsp; 国际MD协会</td></tr>
+      <tr><th data-cn="法人性质" data-en="Status">법인 성격</th><td data-cn="依据韩国《民法》第32条设立的非营利法人 / 主管机关：产业通商资源部" data-en="Non-profit corporation under Article 32 of the Korean Civil Act / Supervised by the Ministry of Trade, Industry and Energy">「민법」 제32조에 따른 비영리법인 / 주무관청 산업통상자원부</td></tr>
+      <tr><th data-cn="设立许可" data-en="Licensed">설립허가</th><td data-cn="2017年5月12日 · 许可编号 第2017-19号 · 法人登记号 270121-0035534" data-en="12 May 2017 · Licence No. 2017-19 · Corp. reg. 270121-0035534">2017년 5월 12일 &nbsp;·&nbsp; 허가번호 제2017-19호 &nbsp;·&nbsp; 법인등록번호 270121-0035534</td></tr>
+      <tr><th data-cn="设立宗旨" data-en="Purpose">설립 목적</th><td data-cn="汇聚流通及相关行业从业者，构建流通领域的国际网络，支持韩国优质商品走向海外，为提升国家竞争力作出贡献。" data-en="To build an international network in distribution and, through it, to support Korean products abroad and strengthen national competitiveness.">유통 및 관련 업계 종사자들이 모여 유통 분야의 국제적 네트워크를 구축하고, 이를 활용하여 대한민국 우수 상품의 해외 진출을 지원함으로써 국가 경쟁력 강화에 이바지한다.</td></tr>
+      <tr><th data-cn="组织" data-en="Officers">조직</th><td data-cn="会长 安承完 / 秘书长 金俊 / 秘书处长 金允贞 / 经营组 崔恩妃" data-en="President Ahn Seung Wan / Secretary General Kim Joon / Director Kim Yun Jung / Management Choi Eun Bi">회장 안승완 &nbsp;/&nbsp; 사무총장 김준 &nbsp;/&nbsp; 사무국장 김윤정 &nbsp;/&nbsp; 경영팀 최은비</td></tr>
+      <tr><th data-cn="地址" data-en="Address">소재지</th><td data-cn="首尔特别市瑞草区瑞云路13号" data-en="13 Seoun-ro, Seocho-gu, Seoul, Republic of Korea">서울특별시 서초구 서운로 13</td></tr>
     </table>
   </div>
-</div></div></div>
+</section>
 
-<div id="page-edu-apply" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Apply</div><div class="hero-title">교육 신청</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('edu-onegate')">ONEGATE 과정</span>
-  <span class="subnav-item" onclick="showPage('edu-schedule')">교육 일정</span>
-  <span class="subnav-item active">교육 신청</span>
-  <span class="subnav-item" onclick="showPage('edu-job')">취업 연계</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">신청 과정 <span class="req">*</span></label>
-      <select class="form-select"><option>과정을 선택하세요</option><option>ONEGATE MD 13기</option><option>D2C 라이브커머스 워크샵</option></select>
-    </div>
-    <div class="form-group"><label class="form-label">성명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="홍길동"></div>
-  </div>
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">회사명</label><input type="text" class="form-input" placeholder="(주)세계무역경에등록""></div>
-    <div class="form-group"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="010-0000-0000"></div>
-  </div>
-  <div class="form-row full">
-    <div class="form-group"><label class="form-label">이메일 <span class="req">*</span></label><input type="text" class="form-input" placeholder="example@email.com"></div>
-  </div>
-  <div class="form-row full">
-    <div class="form-group"><label class="form-label">신청 동기</label><textarea class="form-textarea" placeholder="교육 신청 동기를 입력해 주세요"></textarea></div>
-  </div>
-  <button class="form-btn">[신청하기]</button>
-</div></div></div>
-
-<div id="page-edu-job" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Job Connect</div><div class="hero-title">취업 연계</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="card-grid">
-    <div class="card"><div class="card-num">다이소 코리아</div><div class="card-title">MD 코디네이터</div><div class="card-desc">수출입입사 담당 MD 코디네이터 모집</div><div class="card-tag">모집중</div></div>
-    <div class="card"><div class="card-num">합정특별시</div><div class="card-title">글로벌 판로 전문직</div><div class="card-desc">신규 우수 수출 기업 MD 모집</div><div class="card-tag">마감임박</div></div>
-    <div class="card"><div class="card-num">글로벌 비즈</div><div class="card-title">B2B 수출 담당 MD</div><div class="card-desc">해외 바이어 바이잫 담당 MD 모집</div><div class="card-tag">코디네이터</div></div>
-  </div>
-</div></div></div>
-<!-- 커뮤니티 -->
-<div id="page-com-notice" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Community</div><div class="hero-title">공지사항</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item active">공지사항</span>
-  <span class="subnav-item" onclick="showPage('com-news')">협회 소식</span>
-  <span class="subnav-item" onclick="showPage('com-press')">언론·보도</span>
-  <span class="subnav-item" onclick="showPage('com-faq')">FAQ</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="board-item"><div class="board-num">5</div><div class="board-title">2024 하반기 글로벌 바이어 상담회 참가기업 모집 안내<span class="board-new">N</span></div><div class="board-date">2024.11.20</div></div>
-  <div class="board-item"><div class="board-num">4</div><div class="board-title">IMD×SPECFIN 글로벌 투자펀드 전략적 협력협약 체결<span class="board-new">N</span></div><div class="board-date">2024.11.15</div></div>
-  <div class="board-item"><div class="board-num">3</div><div class="board-title">제12회 ONEGATE MD 전문과정 수료식 개최</div><div class="board-date">2024.10.28</div></div>
-  <div class="board-item"><div class="board-num">2</div><div class="board-title">2024 광주·전남 수출 유망기업 멘토링 사업 협약</div><div class="board-date">2024.10.10</div></div>
-  <div class="board-item"><div class="board-num">1</div><div class="board-title">일본 ALTA와 유통분야 상호협력 MOU 연장</div><div class="board-date">2024.09.25</div></div>
-</div></div></div>
-
-<div id="page-com-news" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Community</div><div class="hero-title">협회 소식</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('com-notice')">공지사항</span>
-  <span class="subnav-item active">협회 소식</span>
-  <span class="subnav-item" onclick="showPage('com-press')">언론·보도</span>
-  <span class="subnav-item" onclick="showPage('com-faq')">FAQ</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="board-item"><div class="board-num">5</div><div class="board-title">2024 연말 회원 네트워킹 데이 — 서울 마포<span class="board-new">N</span></div><div class="board-date">2024.12.05</div></div>
-  <div class="board-item"><div class="board-num">4</div><div class="board-title">D2C 라이브커머스 실전 워크샵 (3기) 개강</div><div class="board-date">2024.11.28</div></div>
-  <div class="board-item"><div class="board-num">3</div><div class="board-title">IR센터 투자설명회 — Pre-IPO 포트폴리오 소개</div><div class="board-date">2024.11.08</div></div>
-</div></div></div>
-
-<div id="page-com-press" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Press</div><div class="hero-title">언론·보도</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('com-notice')">공지사항</span>
-  <span class="subnav-item" onclick="showPage('com-news')">협회 소식</span>
-  <span class="subnav-item active">언론·보도</span>
-  <span class="subnav-item" onclick="showPage('com-faq')">FAQ</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <img src="https://picsum.photos/seed/news/1200/800" alt="제1재경일보" class="press-img">
-  <div style="font-size:13px;color:#555;line-height:1.8;margin-bottom:20px">중국 제1재경일보 (November 06, 2019) — 상하이 현지 취재 기사.</div>
-  <div class="press-photo-grid">
-    <img src="https://picsum.photos/seed/news/800/450" alt="보도1">
-    <img src="https://picsum.photos/seed/alibaba/800/450" alt="보도2">
-    <img src="https://picsum.photos/seed/buyer/800/450" alt="보도3">
-    <img src="https://picsum.photos/seed/china/800/450" alt="보도4">
-  </div>
-</div></div></div>
-
-<div id="page-com-faq" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">FAQ</div><div class="hero-title">자주 묻는 질문</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('com-notice')">공지사항</span>
-  <span class="subnav-item" onclick="showPage('com-news')">협회 소식</span>
-  <span class="subnav-item" onclick="showPage('com-press')">언론·보도</span>
-  <span class="subnav-item active">FAQ</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="accordion open"><div class="acc-header">Q. 협회에 가입하려면 어떻게 해야 하나요?<div class="acc-arrow">▾</div></div><div class="acc-body">웹사이트의 '회원 가입 안내' 메뉴를 통해 신청하실 수 있습니다. 모집 기간 중 신청서를 작성하여 제출하시면 심사 후 승인됩니다.</div></div>
-  <div class="accordion"><div class="acc-header">Q. 바이어 상담회는 누구나 참가할 수 있나요?<div class="acc-arrow">▾</div></div><div class="acc-body">글로벌 판로 개척에 관심 있는 중소기업라면 누구나 상담 신청이 가능합니다. 단, 협회원사에게 우선 매칭 기회를 제공합니다.</div></div>
-  <div class="accordion"><div class="acc-header">Q. ONEGATE 교육은 어디서 신청하나요?<div class="acc-arrow">▾</div></div><div class="acc-body">웹사이트의 교육신청 메뉴 또는 전화(02-2088-2269)로 신청하실 수 있습니다.</div></div>
-</div></div></div>
-
-<!-- 회원 페이지들 -->
-<div id="page-mem-guide" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Member</div><div class="hero-title">회원 가입 안내</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item active">회원 가입 안내</span>
-  <span class="subnav-item" onclick="showPage('mem-benefit')">회원 혜택</span>
-  <span class="subnav-item" onclick="showPage('mem-partner')">협약 기관 신청</span>
-  <span class="subnav-item" onclick="showPage('mem-apply')">신청 양식</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="step-list">
-    <div class="step-item"><div class="step-num">01</div><div class="step-title">신청서 제출</div><div class="step-desc">양식 작성 후 이메일 제출</div></div>
-    <div class="step-item"><div class="step-num">02</div><div class="step-title">심사</div><div class="step-desc">협회 심사 위원회 심사 (7영업일 이내)</div></div>
-    <div class="step-item"><div class="step-num">03</div><div class="step-title">승인 통보</div><div class="step-desc">이메일 또는 전화로 승인 통보</div></div>
-    <div class="step-item"><div class="step-num">04</div><div class="step-title">회비 납부</div><div class="step-desc">연회비 납부 후 정식 가입</div></div>
-  </div>
-  <div class="card-grid" style="margin-top:40px">
-    <div class="card"><div class="card-num">일반회원</div><div class="card-title">소기업·예비창업자</div><div class="card-desc">연회비: 50만원/년<br>글로벌 판로 컨설팅, 교육 할인, 바이어 상담회 참가</div></div>
-    <div class="card"><div class="card-num">기업회원</div><div class="card-title">중견기업</div><div class="card-desc">연회비: 150만원/년<br>우선 바이어 연결, 연매 IR 실스 및 IR센터 접수</div></div>
-    <div class="card"><div class="card-num">프리미엄회원</div><div class="card-title">글로벌 브랜드</div><div class="card-desc">연회비: 300만원/년<br>동반성장 컨설팅, D2C 라이브 지원, 전담 MD 연계</div></div>
-  </div>
-</div></div></div>
-
-<div id="page-mem-benefit" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Benefits</div><div class="hero-title">회원 혜택</div></div></div>
-<div class="subnav"><div class="subnav-inner">
-  <span class="subnav-item" onclick="showPage('mem-guide')">가입 안내</span>
-  <span class="subnav-item active">회원 혜택</span>
-  <span class="subnav-item" onclick="showPage('mem-partner')">협약 기관</span>
-  <span class="subnav-item" onclick="showPage('mem-apply')">신청 양식</span>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="card-grid">
-    <div class="card"><div class="card-icon">바이어</div><div class="card-title">글로벌 바이어 연결</div><div class="card-desc">38개국 검증된 바이어와 1:1 매칭 상담</div></div>
-    <div class="card"><div class="card-icon">교육</div><div class="card-title">ONEGATE 교육 할인</div><div class="card-desc">MD 전문과정 필드 교육 20% 할인</div></div>
-    <div class="card"><div class="card-icon">컨설팅</div><div class="card-title">글로벌 판로 컨설팅</div><div class="card-desc">수출 진단에서 입점까지 전담 컨설팅</div></div>
-    <div class="card"><div class="card-icon">IR</div><div class="card-title">IR센터 접수</div><div class="card-desc">Pre-IPO 투자 채널 접수 우선 자격</div></div>
-    <div class="card"><div class="card-icon">네트워킹</div><div class="card-title">회원사 네트워킹</div><div class="card-desc">연간 회원사 담당 네트워킹 데이 참가</div></div>
-    <div class="card"><div class="card-icon">세미나</div><div class="card-title">전문 세미나 사전등록</div><div class="card-desc">연간 10회+ 전문 세미나 우선 등록</div></div>
-  </div>
-</div></div></div>
-
-<div id="page-mem-partner" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Partner</div><div class="hero-title">협약 기관 신청</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">기관명 *</label><input type="text" class="form-input" placeholder="기관명을 입력하세요"></div>
-    <div class="form-group"><label class="form-label">담당자명 *</label><input type="text" class="form-input" placeholder="담당자 성명"></div>
-  </div>
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">연락처 *</label><input type="text" class="form-input" placeholder="010-0000-0000"></div>
-    <div class="form-group"><label class="form-label">이메일 *</label><input type="text" class="form-input" placeholder="example@org.kr"></div>
-  </div>
-  <div class="form-row full"><div class="form-group"><label class="form-label">협력 내용</label><textarea class="form-textarea" placeholder="협력 희망 사항을 입력해 주세요"></textarea></div></div>
-  <button class="form-btn">[신청하기]</button>
-</div></div></div>
-
-<div id="page-mem-apply" class="page"><div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Apply</div><div class="hero-title">신청 양식</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">회사명 *</label><input type="text" class="form-input" placeholder="(주)예시업체"></div>
-    <div class="form-group"><label class="form-label">대표자명 *</label><input type="text" class="form-input" placeholder="홍길동"></div>
-  </div>
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">업종</label><input type="text" class="form-input" placeholder="제조업, 식품, 코스메틱 등"></div>
-    <div class="form-group"><label class="form-label">회원 종류</label>
-      <select class="form-select"><option>선택하세요</option><option>일반회원</option><option>기업회원</option><option>프리미엄회원</option></select>
+<!-- ============ QUOTE ============ -->
+<section class="quote" style="padding:96px 0">
+  <div class="wrap rv">
+    <p class="q" data-cn="“把客人带进来，<br>把商品送出去，<br>再亲自撑住那张<em>货架</em>。”" data-en="“Bring the customer in.<br>Send the product out.<br>And hold <em>the shelf</em> yourself.”">“손님을 데려오고,<br>상품을 내보내고,<br>그 <em>매대</em>를 직접 지킵니다.”</p>
+    <div class="who">
+      <span class="ln"></span>
+      <span data-cn="社团法人 国际MD协会 会长" data-en="President, International MD Association">사단법인 국제MD협회 회장</span>
+      <b data-cn="安 承 完" data-en="AHN SEUNG WAN">안 승 완</b>
     </div>
   </div>
-  <div class="form-row">
-    <div class="form-group"><label class="form-label">연락처 *</label><input type="text" class="form-input" placeholder="010-0000-0000"></div>
-    <div class="form-group"><label class="form-label">이메일 *</label><input type="text" class="form-input" placeholder="example@company.com"></div>
-  </div>
-  <div class="form-row full"><div class="form-group"><label class="form-label">수출 현황 및 가입 동기</label><textarea class="form-textarea" placeholder="현재 수출 현황과 협회 가입 동기를 작성해 주세요"></textarea></div></div>
-  <button class="form-btn">[회원 가입 신청]</button>
-</div></div></div>
+</section>
 
-<!-- IR센터 -->
-<div id="page-ir" class="page">
-<div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">IR Center · IMD × SPECFIN</div>
-  <div class="hero-title">IR 센터</div>
-  <div class="hero-desc">실리콘밸리 Pre-IPO 투자 채널·KPop Reference IP·뉴욕 상업부동산 등 글로벌 포트폴리오를 한 곳에서.</div>
-</div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div class="collab-banner" style="margin-bottom:40px">
-    <div class="collab-text">IMD × <strong>SPECFIN</strong> 글로벌 투자펀드 전략적 협력 파트너십</div>
-  </div>
-  <div class="ir-card-grid">
-    <div class="ir-card"><div class="ir-card-type">PRE-IPO · US TECH</div><div class="ir-card-name">SpaceX</div><div class="ir-card-desc">일론 머스크의 우주 탐사 기업. 영업이익 급성장 중.</div><div class="ir-card-status active">접수 중</div></div>
-    <div class="ir-card"><div class="ir-card-type">PRE-IPO · AI</div><div class="ir-card-name">OpenAI</div><div class="ir-card-desc">GPT 개발사. 글로벌 AI 시장 선도 기업.</div><div class="ir-card-status active">접수 중</div></div>
-    <div class="ir-card"><div class="ir-card-type">PRE-IPO · AI SAFETY</div><div class="ir-card-name">Anthropic</div><div class="ir-card-desc">AI 안전 개선 및 Claude 개발사.</div><div class="ir-card-status active">접수 중</div></div>
-    <div class="ir-card"><div class="ir-card-type">PRE-IPO · FINTECH</div><div class="ir-card-name">Stripe</div><div class="ir-card-desc">글로벌 결제 인프라 개발사.</div><div class="ir-card-status">확인 중</div></div>
-    <div class="ir-card"><div class="ir-card-type">K-CULTURE IP</div><div class="ir-card-name">KPop Reference IP</div><div class="ir-card-desc">K팝 레퍼런스 디지털 IP 포트폴리오.</div><div class="ir-card-status">확인 중</div></div>
-    <div class="ir-card"><div class="ir-card-type">REAL ESTATE · NYC</div><div class="ir-card-name">뉴욕 상업부동산</div><div class="ir-card-desc">뉴욕 명문 상업부동산 포트폴리오.</div><div class="ir-card-status">확인 중</div></div>
-  </div>
-  <div class="notice-box" style="margin-top:32px">IR센터 투자신청은 협회원사에게 우선 제공됩니다. 일반 문의는 info@imd-global.or.kr로 도보해 주시기 바랍니다.</div>
-  <div style="text-align:center;margin-top:32px">
-    <span class="cta-btn" onclick="showPage('mem-apply')">투자 문의하기</span>
-  </div>
-</div></div></div>
-<!-- 사이트맵 -->
-<div id="page-sitemap" class="page">
-<div class="page-hero"><div class="hero-inner"><div class="hero-eyebrow">Sitemap</div><div class="hero-title">사이트맵</div></div></div>
-<div class="section" style="background:#fff"><div class="section-inner">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
-    <div>
-      <div style="font-size:13px;font-weight:700;color:var(--navy);padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:16px">협회소개</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('about-intro')">협회소개</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('about-vision')">비전 &amp; 목표</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('about-history')">연혁</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('about-org')">조직도</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('about-location')">찾아오시는 길</div>
-    </div>
-    <div>
-      <div style="font-size:13px;font-weight:700;color:var(--navy);padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:16px">서비스</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('svc-global')">글로벌 판로 개척</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('svc-edu')">MD 전문 교육</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('svc-buyer')">바이어 상담회</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('svc-ip')">IP 인증</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('svc-imc')">IMC 홍보</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('svc-startup')">창업·취업</div>
-    </div>
-    <div>
-      <div style="font-size:13px;font-weight:700;color:var(--navy);padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:16px">교육·커뮤니티</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('edu-onegate')">ONEGATE 과정</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('edu-schedule')">교육 일정</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('com-notice')">공지사항</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('com-news')">협회 소식</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('com-faq')">자주 묻는 질문</div>
-    </div>
-    <div>
-      <div style="font-size:13px;font-weight:700;color:var(--navy);padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:16px">회원·IR</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('mem-guide')">회원 가입 안내</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('mem-benefit')">회원 혜택</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('mem-apply')">신청 양식</div>
-      <div style="font-size:12.5px;color:#666;line-height:2.2;cursor:pointer" onclick="showPage('ir')">IR센터</div>
-    </div>
-  </div>
-</div></div></div>
+<!-- ============ 02 INBOUND ============ -->
+<section class="dark" id="inbound">
+  <div class="wrap">
+    <p class="eyebrow rv">02 — Inbound</p>
+    <h2 class="sec rv" data-cn="把外国客人<br>引流到韩国的门店" data-en="Foreign customers,<br>routed into Korean stores">외국인을<br>한국의 매장으로</h2>
+    <p class="lead rv" data-cn="中国VISA持卡人在韩消费额已位居各国之首，但其中大部分止步于免税店。协会通过与VISA中国的联动，把这笔支付流量分配到百货店、免税店、医疗机构、路面店与餐厅 — 让钱留在韩国的实体经济里。" data-en="Chinese VISA cardholders already spend more in Korea than any other nationality, yet most of it stops at duty free. Through the VISA China linkage we spread that payment flow across department stores, duty free, clinics, street-level shops and restaurants — so the money stays in the real Korean economy.">중국 VISA 카드 소지자가 한국에서 쓰는 돈은 이미 국가별 1위입니다. 그런데 대부분이 면세점에서 멈춥니다. 협회는 비자차이나 연계를 통해 이 결제 흐름을 백화점·면세점·병원·로드숍·식당으로 퍼뜨립니다. 그 돈이 한국의 실물 경제에 남도록 하는 일입니다.</p>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
+    <div class="stats rv" style="margin-top:52px">
+      <div class="stat"><div class="n">2.2<i data-cn="亿名" data-en="hundred million">억 명</i></div><div class="l" data-cn="引流对象的外国游客规模<span>通过VISA中国网络触达</span>" data-en="Foreign visitors in reach<span>through the VISA China network</span>">모객 대상 외국인 규모<span>비자차이나 네트워크로 접근</span></div></div>
+      <div class="stat"><div class="n">3.6<i data-cn="万亿韩元" data-en="trn KRW">조 원</i></div><div class="l" data-cn="中国VISA持卡人在韩消费额<span>2024年 · 各国第一</span>" data-en="Chinese VISA spend in Korea<span>2024 · 1st among all countries</span>">중국 VISA 카드 한국 소비액<span>2024년 · 국가별 1위</span></div></div>
+      <div class="stat"><div class="n">88.9<i data-cn="万韩元" data-en="K KRW">만 원</i></div><div class="l" data-cn="人均信用卡消费额<span>为日本的3倍</span>" data-en="Per-person card spend<span>3× that of Japan</span>">1인당 신용카드 소비액<span>일본의 3배</span></div></div>
+      <div class="stat"><div class="n">47<i>%</i></div><div class="l" data-cn="在韩消费中购物占比<span>约1.7万亿韩元</span>" data-en="Share spent on shopping<span>approx. 1.7 trn KRW</span>">한국 소비 중 쇼핑 비중<span>약 1.7조 원</span></div></div>
+    </div>
+
+    <div class="rv" style="margin-top:62px">
+      <p class="eyebrow ko" data-cn="这笔钱花在哪里" data-en="Where that money goes">그 돈이 어디에 쓰이는가</p>
+      <div class="bars">
+        <div class="bar"><div class="bl" data-cn="餐饮 · 免税店<span>Food &amp; Duty Free</span>" data-en="Food &amp; Duty Free<span>餐饮 · 免税店</span>">식음료 · 면세점<span>Food &amp; Duty Free</span></div><div class="bt"><i class="bf" data-p="100"></i></div><div class="bv">21%</div></div>
+        <div class="bar hl"><div class="bl" data-cn="百货店<span>Department Store</span>" data-en="Department Store<span>百货店</span>">백화점<span>Department Store</span></div><div class="bt"><i class="bf" data-p="71"></i></div><div class="bv">15%</div></div>
+        <div class="bar"><div class="bl" data-cn="服饰 · 杂货 · 路面店<span>Apparel, Goods &amp; Shops</span>" data-en="Apparel, Goods &amp; Shops<span>服饰 · 杂货 · 路面店</span>">의류 · 잡화 · 로드숍<span>Apparel, Goods &amp; Shops</span></div><div class="bt"><i class="bf" data-p="52"></i></div><div class="bv">11%</div></div>
+        <div class="bar hl"><div class="bl" data-cn="医疗健康<span>Medical &amp; Health</span>" data-en="Medical &amp; Health<span>医疗健康</span>">메디컬 헬스케어<span>Medical &amp; Health</span></div><div class="bt"><i class="bf" data-p="48"></i></div><div class="bv" data-cn="约 10%" data-en="approx. 10%">약 10%</div></div>
+        <div class="bar"><div class="bl" data-cn="酒店住宿<span>Hotel</span>" data-en="Hotel<span>酒店住宿</span>">호텔 숙박<span>Hotel</span></div><div class="bt"><i class="bf" data-p="38"></i></div><div class="bv">5~10%</div></div>
+      </div>
+      <p style="font-size:11.5px;color:#7E7368;margin-top:22px" data-cn="资料来源：VISA 商户权益平台资料（2024年）" data-en="Source: VISA merchant benefit platform data (2024)">출처 : VISA 가맹점 혜택 플랫폼 자료 (2024년 기준)</p>
+    </div>
+
+    <div class="rv" style="margin-top:70px">
+      <p class="eyebrow ko" data-cn="我们把客人送到这些地方" data-en="Where we send them">우리가 손님을 보내는 곳</p>
+      <div class="g3" style="margin-top:28px">
+        <div class="cd">
+          <div class="ct"><h4 data-cn="百货店 · 免税店" data-en="Department Stores &amp; Duty Free">백화점 · 면세점</h4><div class="pc">36%</div></div>
+          <p class="cs" data-cn="占比最高的消费品类" data-en="The largest share of spending">가장 큰 비중의 소비 영역</p>
+          <p data-cn="将VIP贵宾厅、名品店免排队、专属卡折扣，以及支付环节的优惠券与返现，与门店对接。" data-en="VIP lounges, queue-free access at luxury counters, card discounts, and coupons and cashback attached at the point of payment.">VIP 라운지, 명품 매장 대기 면제, 전용 카드 할인, 결제 단계의 쿠폰과 캐시백을 매장과 연계합니다.</p>
+        </div>
+        <div class="cd">
+          <div class="ct"><h4 data-cn="医疗机构" data-en="Clinics">병원</h4><div class="pc" data-cn="约 10%" data-en="approx. 10%">약 10%</div></div>
+          <p class="cs" data-cn="以预约制对接合作医疗机构" data-en="Partner clinics, by appointment">제휴 의료기관 사전 예약 연결</p>
+          <p data-cn="医疗健康消费占比约10%。以预约制方式对接，入境前即确定日程。" data-en="Medical and wellness is about a tenth of the spend. Connected by appointment, with the schedule fixed before arrival.">메디컬 헬스케어 비중이 약 10%입니다. 사전 예약 기반으로 연결하고, 입국 전에 일정을 확정합니다.</p>
+        </div>
+        <div class="cd">
+          <div class="ct"><h4 data-cn="路面店 · 餐厅" data-en="Shops &amp; Restaurants">로드숍 · 식당</h4><div class="pc">11%+</div></div>
+          <p class="cs" data-cn="游客实际走过的街道" data-en="The streets they actually walk">관광객이 실제로 걷는 거리</p>
+          <p data-cn="明洞、弘大、江南等商圈的门店与餐厅。这是以往被漏掉、却最能把钱留在本地的部分。" data-en="Shops and restaurants in Myeongdong, Hongdae and Gangnam — the part usually left out, and the part that keeps money closest to the ground.">명동·홍대·강남 상권의 매장과 식당입니다. 지금까지 빠져 있었지만, 돈이 가장 가까이 남는 자리입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div class="k">
+        <h4 data-cn="VVIP 客群" data-en="VVIP">VVIP 모객</h4>
+        <p class="ks" data-cn="面向发卡行高等级持卡人" data-en="Top-tier cardholders of issuing banks">발급은행 상위 등급 카드 소지자</p>
+        <ul>
+          <li data-cn="专属贵宾厅 · 私密购物 · 全程陪同<span>Lounge · private shopping · escort</span>" data-en="Lounge, private shopping, full escort<span>专属贵宾厅 · 私密购物</span>">전용 라운지 · 프라이빗 쇼핑 · 의전 동반<span>Lounge · private shopping · escort</span></li>
+          <li data-cn="采用预约制，提前确定行程与动线<span>Scheduled in advance</span>" data-en="Itinerary fixed in advance<span>采用预约制</span>">사전 예약제로 일정과 동선을 미리 확정<span>Scheduled in advance</span></li>
+        </ul>
+      </div>
+      <div class="k r">
+        <h4 data-cn="普通客群" data-en="General">일반 모객</h4>
+        <p class="ks" data-cn="在签证申请环节展示合作门店" data-en="Reached at the visa application stage">비자 신청 단계에서 제휴 매장 노출</p>
+        <ul>
+          <li data-cn="在官方平台领取优惠券并登记卡片<span>Coupon &amp; card registration</span>" data-en="Coupon claimed and card registered on the official platform<span>官方平台领券</span>">공식 플랫폼에서 쿠폰 수령 · 카드 등록<span>Coupon &amp; card registration</span></li>
+          <li data-cn="访韩后到店支付并完成返现结算<span>Payment &amp; cashback</span>" data-en="Pays in store on arrival; cashback settled<span>到店支付与返现</span>">방한 후 매장 결제 · 캐시백 정산<span>Payment &amp; cashback</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flow rv">
+      <div><div class="fn">01</div><h5 data-cn="合作门店登记" data-en="Store registered">제휴 매장 등록</h5><p>Partner onboarding</p></div>
+      <div><div class="fn">02</div><h5 data-cn="入境前曝光" data-en="Exposed before arrival">입국 전 노출</h5><p>Pre-arrival exposure</p></div>
+      <div><div class="fn">03</div><h5 data-cn="领券 · 登记卡片" data-en="Coupon &amp; card">쿠폰 수령 · 카드 등록</h5><p>Claim &amp; register</p></div>
+      <div><div class="fn">04</div><h5 data-cn="到店支付 · 返现结算" data-en="Pay &amp; settle">매장 결제 · 캐시백 정산</h5><p>Pay &amp; cashback</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAND 1 ============ -->
+<div class="band">
+  <img src="assets/store-in.jpg" alt="" loading="lazy">
+  <div class="bov"></div>
+  <div class="btx"><div class="wrap">
+    <h3 data-cn="客人不是数字，<br>而是走进店里的那一个人。" data-en="A visitor is not a statistic.<br>It is one person walking through the door.">손님은 숫자가 아니라<br>문을 열고 들어오는 한 사람입니다.</h3>
+    <p data-cn="引流的终点是实体门店的收银台，而不是报告书。" data-en="The destination is a till in a real shop, not a line in a report.">모객의 끝은 보고서가 아니라 실제 매장의 계산대입니다.</p>
+  </div></div>
+</div>
+
+<!-- ============ 03 TRADE ============ -->
+<section id="trade">
+  <div class="wrap">
+    <p class="eyebrow rv">03 — Trade</p>
+    <h2 class="sec rv" data-cn="把韩国商品<br>卖到国内与海外" data-en="Korean products,<br>sold at home and abroad">한국 상품을<br>국내와 해외로</h2>
+    <p class="lead rv" data-cn="会员企业负责做出商品，协会负责找到商品该放的位置。协会以首尔产业振兴院的协议为基础，持续把韩国商品送上国内外的货架。" data-en="Members make the product; the association finds where it belongs. On the basis of its agreement with the Seoul Business Agency, the association has kept Korean products moving onto shelves at home and abroad.">상품을 만드는 일은 회원사가, 그 상품이 놓일 자리를 찾는 일은 협회가 합니다. 서울산업진흥원 협약을 기반으로 한국 상품을 국내외 매대에 계속 올려 왔습니다.</p>
+
+    <div class="stats rv" style="margin-top:52px">
+      <div class="stat"><div class="n">35,000<i>SKU</i></div><div class="l" data-cn="累计供应商品<span>持续供应国内外流通渠道</span>" data-en="SKUs supplied<span>continuously, at home and abroad</span>">누적 공급 상품<span>국내외 유통채널 지속 공급</span></div></div>
+      <div class="stat"><div class="n">300<i data-cn="余家" data-en="firms">여 개사</i></div><div class="l" data-cn="参与直播电商的企业<span>中日韩 D2C · 2,400个商品</span>" data-en="Companies in live commerce<span>KR·CN·JP D2C · 2,400 products</span>">라이브커머스 참여 기업<span>한·중·일 D2C · 2,400개 상품</span></div></div>
+      <div class="stat"><div class="n">7<i data-cn="亿韩元" data-en="100M KRW">억 원</i></div><div class="l" data-cn="电视购物30小时总交易额<span>每分钟120万韩元</span>" data-en="Home shopping turnover, 30 hrs<span>KRW 1.2M per minute</span>">홈쇼핑 30시간 총 거래액<span>분당 120만 원</span></div></div>
+      <div class="stat"><div class="n">1,000<i data-cn="万美元" data-en="M USD">만 불</i></div><div class="l" data-cn="出口对接业绩<span>2021年</span>" data-en="Export linkage achieved<span>2021</span>">수출 연계 실적<span>2021년</span></div></div>
+    </div>
+
+    <div class="duo rv">
+      <div class="k">
+        <h4 data-cn="国内渠道" data-en="At home">국내 판로</h4>
+        <p class="ks" data-cn="商品能卖出去的地方，都走一遍" data-en="Every channel where the product can actually sell">상품이 팔릴 수 있는 자리는 전부</p>
+        <ul>
+          <li data-cn="百货店 · 电视购物 · 线上商城的入驻提案与洽谈<span>Entry proposals and negotiation</span>" data-en="Entry proposals and negotiation for department stores, home shopping and online malls<span>百货店 · 电视购物 · 线上商城</span>">백화점 · 홈쇼핑 · 온라인몰 입점 제안과 협상<span>Entry proposals and negotiation</span></li>
+          <li data-cn="直播电商的企划与播出运营<span>Live commerce, planned and broadcast</span>" data-en="Live commerce, planned and broadcast<span>直播电商企划与播出</span>">라이브커머스 기획부터 방송 운영까지<span>Live commerce, planned and broadcast</span></li>
+          <li data-cn="与首尔、光州、大田产业振兴院共同举办流通说明会与买家对接<span>With public agencies</span>" data-en="Trade briefings and buyer matching with the Seoul, Gwangju and Daejeon agencies<span>与公共机构共同举办</span>">서울·광주·대전 산업진흥원과 공동 유통설명회·바이어 매칭<span>With public agencies</span></li>
+        </ul>
+      </div>
+      <div class="k r">
+        <h4 data-cn="海外渠道" data-en="Abroad">해외 판로</h4>
+        <p class="ks" data-cn="只在当地有实际货架的地方" data-en="Only where we hold an actual shelf">실제 매대를 가진 곳에서만</p>
+        <ul>
+          <li data-cn="中国 — 上海国际展示交易中心（一带一路）与外高桥<span>Shanghai · Belt and Road</span>" data-en="China — Shanghai International Exhibition &amp; Trade Center (Belt and Road) and Waigaoqiao<span>中国 — 上海</span>">중국 — 상하이 국제전시교역센터(일대일로)와 와이가오차오<span>Shanghai · Belt and Road</span></li>
+          <li data-cn="日本 — 东京ALTA测试门店，2017年起运营<span>Tokyo · since 2017</span>" data-en="Japan — test store at ALTA, Tokyo, running since 2017<span>日本 — 东京ALTA</span>">일본 — 도쿄 ALTA 테스트 매장, 2017년부터 운영<span>Tokyo · since 2017</span></li>
+          <li data-cn="美国 — 阿拉巴马与洛杉矶据点<span>Alabama · Los Angeles</span>" data-en="United States — bases in Alabama and Los Angeles<span>美国 — 阿拉巴马与洛杉矶</span>">미국 — 알라바마·LA 거점<span>Alabama · Los Angeles</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pg rv">
+      <figure><img src="assets/award.jpg" alt="" loading="lazy"><figcaption data-cn="第一届韩国流通人之夜" data-en="1st Korea Distribution Night">제1회 대한민국 유통인의 밤</figcaption></figure>
+      <figure><img src="assets/mou.jpg" alt="" loading="lazy"><figcaption data-cn="首尔市创造就业业务协议签署" data-en="Seoul job creation agreement signed">서울시 일자리 창출 업무협약식</figcaption></figure>
+      <figure><img src="assets/launch.jpg" alt="" loading="lazy"><figcaption data-cn="SBA 流通品牌评选委员会成立" data-en="SBA retail brand committee launch">SBA 유통브랜드 선정위원회 발대식</figcaption></figure>
+      <figure><img src="assets/forum.jpg" alt="" loading="lazy"><figcaption data-cn="首尔就业大长征政策座谈会" data-en="Seoul employment policy roundtable">서울 일자리 대장정 정책 간담회</figcaption></figure>
+      <figure><img src="assets/awards2.jpg" alt="" loading="lazy"><figcaption data-cn="中国自由贸易区 韩流中心 活动" data-en="Korean Wave Center, China Free Trade Zone">중국 자유무역구 한류중심 행사</figcaption></figure>
+      <figure><img src="assets/shelf.jpg" alt="" loading="lazy"><figcaption data-cn="会员企业商品的陈列货架" data-en="Member products on the shelf">회원사 상품이 올라간 매대</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAND 2 ============ -->
+<div class="band">
+  <img src="assets/port.jpg" alt="" loading="lazy">
+  <div class="bov"></div>
+  <div class="btx"><div class="wrap">
+    <h3 data-cn="名片留在桌上，<br>货物必须装上船。" data-en="Business cards stay on the desk.<br>Goods have to get on the ship.">명함은 책상에 남고,<br>상품은 배에 실려야 합니다.</h3>
+    <p data-cn="上海外高桥 — 与运营自由贸易区的上海外高桥集团联动" data-en="Waigaoqiao, Shanghai — linked with the group that runs the free trade zone">중국 상하이 와이가오차오 — 자유무역지대 운영사 상해외고교집단과 연계</p>
+  </div></div>
+</div>
+
+<!-- ============ 04 CENTERS ============ -->
+<section id="center" style="background:var(--paper2);border-bottom:1px solid var(--line2)">
+  <div class="wrap">
+    <p class="eyebrow rv">04 — Wholesale Centers</p>
+    <h2 class="sec rv" data-cn="批发流通中心，<br>在韩国与海外直接运营" data-en="Wholesale centers,<br>run by the association itself">홀세일 유통센터를<br>전국과 해외에</h2>
+    <p class="lead rv" data-cn="协会不只是介绍渠道，而是亲自运营货架。中心不公开标价，因此会员企业可以在不扰乱既有渠道价格的前提下开拓新的交易对象。批发交易、买家对接与MD培训都在同一个空间里完成。" data-en="The association does not merely introduce a channel; it runs the shelf. There are no price tags on the floor, so members can open new trade without disturbing the prices their existing channels depend on. Wholesale, buyer matching and MD training all happen in one space.">협회는 채널을 소개하는 데 그치지 않고 매대를 직접 운영합니다. 센터는 가격표를 붙이지 않기 때문에, 회원사는 기존 유통 채널의 판매 가격을 흔들지 않으면서 새로운 거래선을 만들 수 있습니다. 홀세일 거래와 바이어 매칭, MD 교육이 한 공간에서 이루어집니다.</p>
+
+    <div class="split rv" style="margin-top:56px">
+      <div><div class="ph" style="aspect-ratio:4/3"><img src="assets/showroom.jpg" alt="" loading="lazy"></div>
+        <p class="cap" data-cn="批发流通中心 — 仅对受邀买家与团体开放" data-en="A wholesale center — open to invited buyers and groups only">유통센터 — 초청된 바이어와 단체에게만 엽니다</p></div>
+      <div><div class="ph" style="aspect-ratio:4/3"><img src="assets/class.jpg" alt="" loading="lazy"></div>
+        <p class="cap" data-cn="中心内的MD培训课程 — 由大型流通企业MD出身讲师授课" data-en="MD training inside the center — taught by merchandisers from major retailers">센터에서 진행하는 MD 교육과정 — 대형 유통사 MD 출신 강사진</p></div>
+    </div>
+
+    <div class="g4 rv">
+      <div class="cd"><h4 data-cn="批发交易" data-en="Wholesale">홀세일 거래</h4><p data-cn="会员企业陈列商品，协会负责邀请买家、洽谈、翻译与结算。数量、交期与通关条件当场厘清。" data-en="Members display; the association invites buyers and handles talks, interpreting and settlement. Quantity, lead time and customs are settled on the spot.">회원사가 상품을 비치하고, 협회가 바이어 초청·상담·통역·정산을 맡습니다. 수량·납기·통관 조건을 그 자리에서 정리합니다.</p></div>
+      <div class="cd"><h4 data-cn="买家对接" data-en="Buyer Matching">바이어 매칭</h4><p data-cn="与地方产业振兴院共同举办流通说明会，并把海外买家带到中心现场。" data-en="Trade briefings with regional business agencies, and overseas buyers brought onto the floor.">지자체 산업진흥원과 공동으로 유통설명회를 열고, 해외 바이어를 센터 현장으로 데려옵니다.</p></div>
+      <div class="cd"><h4 data-cn="MD 培训" data-en="MD Training">MD 교육과정</h4><p data-cn="商品企划、成本与毛利结构、入驻提案、渠道运营、直播电商、通关与认证实务。" data-en="Product planning, cost and margin, entry proposals, channel operations, live commerce, customs and certification.">상품 기획, 원가와 마진 구조, 입점 제안서, 채널 운영, 라이브커머스, 통관·인증 실무.</p></div>
+      <div class="cd"><h4 data-cn="人才派驻" data-en="Placement">인력 배정</h4><p data-cn="结业学员直接对接至会员企业与中心现场。需要人力的企业由协会派驻自行培养的MD。" data-en="Graduates go straight to member companies and to the center floor. Where a company needs a merchandiser, we assign one we trained.">수료생은 회원사와 센터 현장에 바로 연결됩니다. 인력이 필요한 기업에는 협회가 양성한 MD를 배정합니다.</p></div>
+    </div>
+
+    <div class="rv" style="margin-top:72px">
+      <p class="eyebrow ko" data-cn="运营据点" data-en="Where the centers are">운영 거점</p>
+      <div class="globe">
+        <div><div class="pin"></div><div class="city">Seoul</div><div class="kr" data-cn="首尔" data-en="Seoul">서울</div><div class="rl" data-cn="总部 · 秘书处<br>瑞草区瑞云路13号" data-en="Head office · Secretariat<br>Seocho-gu, Seoul">본부 · 사무국<br>서초구 서운로 13</div></div>
+        <div><div class="pin"></div><div class="city">Alabama</div><div class="kr" data-cn="阿拉巴马" data-en="Alabama">알라바마</div><div class="rl" data-cn="美国东南部据点" data-en="U.S. Southeast">미국 남동부 거점</div></div>
+        <div><div class="pin"></div><div class="city">LA</div><div class="kr" data-cn="洛杉矶" data-en="Los Angeles">로스앤젤레스</div><div class="rl" data-cn="美国西岸据点" data-en="U.S. West Coast">미국 서부 거점</div></div>
+        <div><div class="pin"></div><div class="city">Shanghai</div><div class="kr" data-cn="上海" data-en="Shanghai">상하이</div><div class="rl" data-cn="国际展示交易中心<br>一带一路" data-en="Intl. Exhibition &amp; Trade Center<br>Belt and Road">국제전시교역센터<br>일대일로</div></div>
+        <div><div class="pin"></div><div class="city">Hangzhou</div><div class="kr" data-cn="杭州" data-en="Hangzhou">항저우</div><div class="rl" data-cn="华东运营据点" data-en="East China operations">화동 운영 거점</div></div>
+      </div>
+      <div class="ph" style="aspect-ratio:21/8;margin-top:40px"><img src="assets/beltroad.jpg" alt="" loading="lazy"></div>
+      <p class="cap" data-cn="上海国际展示交易中心（一带一路）— 韩国优质商品进入中国的通道" data-en="Shanghai International Exhibition &amp; Trade Center (Belt and Road) — the China entry point for Korean products">상하이 국제전시교역센터 (일대일로) — 한국 우수상품의 중국 진입 통로</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 HISTORY ============ -->
+<section id="history">
+  <div class="wrap">
+    <p class="eyebrow rv">05 — History</p>
+    <h2 class="sec rv" data-cn="走过来的路" data-en="How we got here">걸어온 길</h2>
+    <p class="sec-sub rv" data-cn="从一个信息交流会，到拥有货架的社团法人。" data-en="From a study circle to a licensed corporation that holds shelves.">정보교류 모임에서 매대를 가진 사단법인까지.</p>
+    <div class="tl rv">
+      <div class="row"><div class="yr">2002</div><div class="tx" data-cn="流通一线MD信息交流会成立" data-en="MD study circle formed on the retail floor">유통 현장 MD 정보교류 모임 결성</div></div>
+      <div class="row"><div class="yr">2015</div><div class="tx" data-cn="与首尔特别市签署创造就业业务协议" data-en="Job creation agreement with the Seoul Metropolitan Government">서울특별시 일자리 창출 업무협약</div></div>
+      <div class="row"><div class="yr">2017</div><div class="tx" data-cn="获产业通商资源部设立许可，转为社团法人" data-en="Licensed by the Ministry of Trade, Industry and Energy">산업통상자원부 설립허가 · 사단법인 전환</div></div>
+      <div class="row"><div class="yr">2017</div><div class="tx" data-cn="开始运营日本东京ALTA测试门店" data-en="Test store opens at ALTA, Tokyo">일본 도쿄 ALTA 테스트 매장 운영 개시</div></div>
+      <div class="row"><div class="yr">2019</div><div class="tx" data-cn="对接上海国际展示交易中心 · 启动SBA渠道支持" data-en="Shanghai trade center linked · SBA channel support begins">상하이 국제전시교역센터 연계 · SBA 판로지원 착수</div></div>
+      <div class="row"><div class="yr">2021</div><div class="tx" data-cn="出口对接业绩达到1,000万美元 · 举办第一届韩国流通人之夜" data-en="USD 10M in export linkage · 1st Korea Distribution Night">수출 연계 실적 1,000만 불 달성 · 제1회 대한민국 유통인의 밤</div></div>
+      <div class="row"><div class="yr">2023</div><div class="tx" data-cn="与首尔校园城事业团签署交流合作协议" data-en="Exchange agreement with the Seoul Campus Town programme">서울시 캠퍼스타운 사업단 교류협력 협약</div></div>
+      <div class="row on"><div class="yr">2026</div><div class="tx" data-cn="启动与VISA中国的联动引流业务 · 开通 imd.or.kr" data-en="VISA China inbound linkage begins · imd.or.kr opens">비자차이나 연계 모객 사업 개시 · imd.or.kr 개설</div></div>
+    </div>
+
+    <p class="eyebrow ko rv" style="margin-top:84px" data-cn="签署过协议或共同开展过业务的机构" data-en="Organisations that have signed or worked with us">협약을 맺었거나 사업을 함께 수행한 기관</p>
+    <div class="wall rv">
+      <div><div class="n" data-cn="产业通商资源部" data-en="Ministry of Trade, Industry and Energy">산업통상자원부</div><div class="e">Supervising ministry</div></div>
+      <div><div class="n" data-cn="首尔特别市" data-en="Seoul Metropolitan Gov.">서울특별시</div><div class="e">2015 · MOU</div></div>
+      <div><div class="n" data-cn="首尔产业振兴院" data-en="Seoul Business Agency">서울산업진흥원</div><div class="e">SBA</div></div>
+      <div><div class="n" data-cn="光州广域市" data-en="Gwangju City">광주광역시</div><div class="e">SME channels</div></div>
+      <div><div class="n" data-cn="大田广域市" data-en="Daejeon City">대전광역시</div><div class="e">SME channels</div></div>
+      <div><div class="n" data-cn="城南市" data-en="Seongnam City">성남시</div><div class="e">SME channels</div></div>
+      <div><div class="n" data-cn="首尔市校园城事业团" data-en="Seoul Campus Town">서울시 캠퍼스타운 사업단</div><div class="e">2023 · Exchange</div></div>
+      <div><div class="n" data-cn="光云大学" data-en="Kwangwoon Univ.">광운대학교</div><div class="e">Campus Town</div></div>
+      <div><div class="n" data-cn="首尔市立大学" data-en="Univ. of Seoul">서울시립대학교</div><div class="e">Campus Town</div></div>
+      <div><div class="n" data-cn="韩国外国语大学" data-en="HUFS">한국외국어대학교</div><div class="e">Campus Town</div></div>
+      <div><div class="n" data-cn="上海外高桥集团" data-en="Shanghai Waigaoqiao Group">상해외고교집단</div><div class="e">2019 · Shanghai FTZ</div></div>
+      <div><div class="n" data-cn="日本 ALTA" data-en="ALTA, Japan">일본 ALTA</div><div class="e">2017 · Tokyo</div></div>
+      <div><div class="n" data-cn="VISA 中国" data-en="VISA China">VISA 중국</div><div class="e">2026 · Inbound</div></div>
+      <div><div class="n" data-cn="运游之行" data-en="Yunyou Zhixing">운유지행</div><div class="e">2026 · China partner</div></div>
+      <div><div class="n" data-cn="安全财团" data-en="Safety Foundation">안전재단</div><div class="e">2025 · Agreement</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 ACTIVITY ============ -->
+<section id="news" style="background:var(--paper2);border-top:1px solid var(--line2)">
+  <div class="wrap">
+    <p class="eyebrow rv">06 — Activity</p>
+    <h2 class="sec rv" data-cn="最近在做的事" data-en="What we are doing now">최근에 하고 있는 일</h2>
+    <p class="sec-sub rv" data-cn="协会的活动按日期公开记录。" data-en="The association records its activity by date.">협회의 활동은 날짜와 함께 기록합니다.</p>
+    <div class="news rv">
+      <div class="it"><div class="dt">2026. 11</div><div class="tt" data-cn="开通官方域名 imd.or.kr，上线三语官方网站" data-en="Official domain imd.or.kr opens; trilingual website launched">공식 도메인 imd.or.kr 개통 · 한·중·영 홈페이지 공개</div><div class="tg">Notice</div></div>
+      <div class="it"><div class="dt">2026</div><div class="tt" data-cn="启动与VISA中国的联动引流业务 — 百货店 · 免税店 · 医疗机构 · 路面店 · 餐厅" data-en="VISA China inbound linkage begins — department stores, duty free, clinics, shops and restaurants">비자차이나 연계 모객 사업 개시 — 백화점 · 면세점 · 병원 · 로드숍 · 식당</div><div class="tg">Business</div></div>
+      <div class="it"><div class="dt">2026. 10</div><div class="tt" data-cn="向产业通商资源部提交协会运营现状资料" data-en="Operating status report submitted to the Ministry of Trade, Industry and Energy">산업통상자원부에 협회 운영현황 자료 제출</div><div class="tg">Report</div></div>
+      <div class="it"><div class="dt">2025</div><div class="tt" data-cn="与安全财团签署业务协议" data-en="Business agreement signed with the Safety Foundation">안전재단 업무협약 체결</div><div class="tg">Agreement</div></div>
+      <div class="it"><div class="dt">2023. 11</div><div class="tt" data-cn="与首尔市校园城事业团（光云大 · 首尔市立大 · 韩国外大）签署交流合作协议" data-en="Exchange agreement with the Seoul Campus Town programme (Kwangwoon, UOS, HUFS)">서울시 캠퍼스타운 사업단(광운대·서울시립대·한국외대) 교류협력 협약</div><div class="tg">Agreement</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">07 — Contact</p>
+    <h2 class="sec rv" data-cn="您想从哪扇门进来？" data-en="Which door are you coming through?">어느 쪽으로 오셨습니까</h2>
+    <p class="sec-sub rv" data-cn="按来访目的选择，我们会由对应负责人直接回复。" data-en="Pick the door that fits; the person in charge replies directly.">목적에 맞는 문을 고르시면 담당자가 직접 회신합니다.</p>
+
+    <div class="doors rv">
+      <a href="mailto:sg@imd.or.kr?subject=%5B%EB%AA%A8%EA%B0%9D%20%EC%A0%9C%ED%9C%B4%5D%20">
+        <div class="dn">01</div>
+        <h4 data-cn="客流合作" data-en="Inbound">모객 제휴</h4>
+        <p data-cn="希望迎接外国客人的百货店、免税店、医疗机构、门店与餐厅" data-en="Department stores, duty free, clinics, shops and restaurants that want foreign customers">외국인 손님을 받고 싶은 백화점·면세점·병원·매장·식당</p>
+        <span class="ar" data-cn="洽谈 →" data-en="Talk to us →">제휴 상담 →</span>
+      </a>
+      <a href="mailto:sg@imd.or.kr?subject=%5B%EC%83%81%ED%92%88%20%EC%9C%A0%ED%86%B5%5D%20">
+        <div class="dn">02</div>
+        <h4 data-cn="商品流通" data-en="Trade">상품 유통</h4>
+        <p data-cn="希望在国内或海外销售自家商品的企业" data-en="Companies that want their product sold at home or abroad">자사 상품을 국내외에 팔고 싶은 기업</p>
+        <span class="ar" data-cn="咨询 →" data-en="Enquire →">판로 문의 →</span>
+      </a>
+      <a href="mailto:sg@imd.or.kr?subject=%5B%EC%9C%A0%ED%86%B5%EC%84%BC%ED%84%B0%5D%20">
+        <div class="dn">03</div>
+        <h4 data-cn="流通中心 · 培训" data-en="Centers &amp; Training">유통센터 · 교육</h4>
+        <p data-cn="希望入驻中心、参加MD课程或需要派驻人才的企业" data-en="To display in a center, join the MD programme, or request a merchandiser">센터 입점, MD 과정 수강, 인력 배정이 필요한 곳</p>
+        <span class="ar" data-cn="咨询 →" data-en="Enquire →">입점 · 과정 문의 →</span>
+      </a>
+      <a href="mailto:sg@imd.or.kr?subject=%5B%ED%9A%8C%EC%9B%90%20%EA%B0%80%EC%9E%85%5D%20">
+        <div class="dn">04</div>
+        <h4 data-cn="入会 · 媒体" data-en="Membership &amp; Press">회원 가입 · 언론</h4>
+        <p data-cn="流通 · 贸易领域MD的入会申请，以及采访与资料索取" data-en="Membership for merchandisers in retail and trade, plus press enquiries">유통·무역 분야 MD의 가입 신청, 취재·자료 요청</p>
+        <span class="ar" data-cn="联系 →" data-en="Contact →">가입 · 취재 문의 →</span>
+      </a>
+    </div>
+
+    <div class="card rv">
       <div>
-        <div class="footer-logo-ko">사단법인 국제MD협회</div>
-        <div class="footer-logo-en">International MD Association</div>
+        <p class="nm">김 준 <small>Kim Joon</small></p>
+        <p class="role" data-cn="秘书长 &nbsp;Secretary General" data-en="Secretary General &nbsp;秘书长">사무총장 &nbsp;Secretary General &nbsp;秘书长</p>
+        <dl>
+          <dt>MOBILE</dt><dd><a href="tel:+821028888288">010 2888 8288</a></dd>
+          <dt>TEL</dt><dd><a href="tel:+820220882269">02 2088 2269</a></dd>
+          <dt>EMAIL</dt><dd><a href="mailto:sg@imd.or.kr">sg@imd.or.kr</a></dd>
+          <dt>WEB</dt><dd><a href="https://imd.or.kr">imd.or.kr</a></dd>
+          <dt data-cn="地址" data-en="ADDRESS">주소</dt><dd data-cn="首尔特别市瑞草区瑞云路13号" data-en="13 Seoun-ro, Seocho-gu, Seoul">서울특별시 서초구 서운로 13</dd>
+        </dl>
       </div>
-      <div class="footer-info">
-        <strong>사단법인 국제MD협회</strong><br>
-        서울특별시 마포구 양화로 15길 12, 인쇄문화회관 2층 (우: 04058)<br>
-        TEL: 02-2088-2269 | FAX: 070-8709-0816 | info@imd-global.or.kr<br>
-        사업자등록번호: 275-82-00150
-      </div>
-      <div class="footer-sns">
-        <div class="sns-btn">fb</div>
-        <div class="sns-btn">in</div>
-        <div class="sns-btn">yt</div>
+      <div class="rt">
+        <img src="assets/mark.png" alt="">
+        <p style="font-size:17px;font-weight:800;letter-spacing:.08em;margin:0 0 5px">사단법인 국제MD협회</p>
+        <p style="font-family:var(--la);font-size:12px;letter-spacing:.2em;color:var(--ink3);margin:0">Association of International Merchandisers</p>
+        <p style="font-size:13px;color:var(--ink3);margin:4px 0 0">社团法人 国际MD协会</p>
+        <div class="legal" data-cn="韩国产业通商资源部主管 非营利法人<br>设立许可 第2017-19号 · Since 2002" data-en="Non-profit corporation supervised by the Ministry of Trade, Industry and Energy<br>Licence No. 2017-19 · Since 2002">산업통상자원부 소관 사단법인<br>설립허가 제2017-19호 · Since 2002</div>
+        <div class="offices">Seoul · Alabama · LA · Shanghai · Hangzhou</div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-links">
-        <a onclick="showPage('about-intro')">협회소개</a>
-        <a onclick="showPage('about-location')">찾아오시는 길</a>
-        <a onclick="showPage('page-sitemap')">사이트맵</a>
-      </div>
-      <div class="footer-copy">&copy; 2024 사단법인 국제MD협회. All rights reserved.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fin">
+    <div class="l">
+      <img src="assets/logo-full.png" alt="사단법인 국제MD협회 Association of International Merchandisers" style="width:268px;margin-bottom:18px;opacity:.9">
+      <span data-cn="首尔特别市瑞草区瑞云路13号 · 02 2088 2269 · sg@imd.or.kr" data-en="13 Seoun-ro, Seocho-gu, Seoul · +82 2 2088 2269 · sg@imd.or.kr">서울특별시 서초구 서운로 13 · 02 2088 2269 · sg@imd.or.kr</span><br>
+      <span style="color:#A89C8D">© 2026 International MD Association. All rights reserved.</span>
     </div>
+    <div class="r">imd.or.kr</div>
   </div>
 </footer>
 
-<!-- SPECFIN BAR -->
-<div class="specfin-bar" id="specfinBar">
-  <div class="specfin-text">IMD × <strong>SPECFIN</strong> &middot; 실리콘밸리 Pre-IPO 투자 채널 개방</div>
-  <span class="specfin-link" onclick="showPage('ir')">IR센터 바로가기</span>
-  <span class="specfin-close" onclick="document.getElementById('specfinBar').style.display='none'">&times;</span>
-</div>
-
 <script>
-let _slide=0,_slides,_dots,_timer;
-function initBanner(){
-  _slides=document.querySelectorAll('.banner-slide');
-  _dots=document.querySelectorAll('.dot');
-  _timer=setInterval(nextSlide,5000);
-}
-function goSlide(n){
-  _slides[_slide].classList.remove('active');
-  _dots[_slide].classList.remove('active');
-  _slide=n;
-  _slides[_slide].classList.add('active');
-  _dots[_slide].classList.add('active');
-  clearInterval(_timer);
-  _timer=setInterval(nextSlide,5000);
-}
-function nextSlide(){goSlide((_slide+1)%_slides.length);}
-function prevSlide(){goSlide((_slide-1+_slides.length)%_slides.length);}
-
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  const page=document.getElementById('page-'+id);
-  if(page){page.classList.add('active');window.scrollTo(0,0);}
-  document.querySelectorAll('.gnb-item').forEach(i=>i.classList.remove('active'));
-  closeMenu();
-}
-
-let _openMenu=null;
-function toggleMenu(name,el){
-  if(_openMenu===name){closeMenu();return;}
-  closeMenu();
-  _openMenu=name;
-  document.querySelectorAll('.gnb-dropdown').forEach(d=>d.classList.remove('open'));
-  const dd=document.getElementById('dd-'+name);
-  if(dd)dd.classList.add('open');
-  document.querySelectorAll('.gnb-item').forEach(i=>i.classList.remove('active'));
-  el.classList.add('active');
-}
-function closeMenu(){
-  _openMenu=null;
-  document.querySelectorAll('.gnb-dropdown').forEach(d=>d.classList.remove('open'));
-}
-document.addEventListener('click',function(e){
-  if(!e.target.closest('nav'))closeMenu();
-});
-document.addEventListener('DOMContentLoaded',function(){
-  if(document.querySelector('.banner-wrap'))initBanner();
-  document.querySelectorAll('.accordion .acc-header').forEach(h=>{
-    h.addEventListener('click',function(){this.parentElement.classList.toggle('open');});
+(function(){
+  var nodes = document.querySelectorAll('[data-cn],[data-en]');
+  nodes.forEach(function(n){ n.setAttribute('data-ko', n.innerHTML); });
+  function setLang(l){
+    document.body.className = 'lang-' + l;
+    document.documentElement.lang = l === 'cn' ? 'zh-CN' : (l === 'en' ? 'en' : 'ko');
+    nodes.forEach(function(n){
+      var v = n.getAttribute('data-' + l);
+      if (v !== null) n.innerHTML = v;
+    });
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-l') === l);
+    });
+    try{ localStorage.setItem('imd_lang', l); }catch(e){}
+    requestAnimationFrame(check);
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-l')); });
   });
-});
-function filterIR(cat){
-  document.querySelectorAll('#irGrid .ir-card').forEach(card=>{
-    card.style.display=(cat==='all'||card.dataset.cat===cat)?'block':'none';
-  });
-}
+  var saved=null; try{ saved = localStorage.getItem('imd_lang'); }catch(e){}
+  if (saved === 'cn' || saved === 'en') setLang(saved);
+
+  var hd = document.getElementById('hd');
+  var heroEl = document.querySelector('.hero');
+  function onScroll(){
+    var y = window.scrollY;
+    hd.classList.toggle('solid', y > 40);
+    hd.classList.toggle('onhero', y < heroEl.offsetHeight - 120);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var bg = document.getElementById('bg'), menu = document.getElementById('menu');
+  bg.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  menu.addEventListener('click', function(e){ if (e.target.tagName === 'A') menu.classList.remove('open'); });
+
+  var items = [].slice.call(document.querySelectorAll('.rv'));
+  function fire(el){
+    el.classList.add('in');
+    el.querySelectorAll('.bf').forEach(function(f, i){
+      var p = f.getAttribute('data-p');
+      setTimeout(function(){ f.style.right = (100 - p) + '%'; }, 150 + i * 110);
+    });
+  }
+  function check(){
+    var h = window.innerHeight;
+    items.forEach(function(el){
+      if (el.classList.contains('in')) return;
+      var r = el.getBoundingClientRect();
+      if (r.top < h * 0.93 && r.bottom > 0) fire(el);
+    });
+  }
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ fire(e.target); io.unobserve(e.target); } });
+    }, {threshold:0, rootMargin:'0px 0px -7% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+  var t=false;
+  function raf(){ if(t) return; t=true; requestAnimationFrame(function(){ check(); t=false; }); }
+  window.addEventListener('scroll', raf, {passive:true});
+  window.addEventListener('resize', raf);
+  window.addEventListener('load', check);
+  check();
+})();
 </script>
 </body>
 </html>
