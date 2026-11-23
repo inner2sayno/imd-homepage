@@ -266,7 +266,7 @@ header.onhero .burger span{background:#F3EEE4}
 @media(max-width:720px){.news .it{grid-template-columns:1fr;gap:6px;padding:18px 0}.news .tg{text-align:left}}
 
 /* ---- 문 ---- */
-.doors{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:48px}
+.doors{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin-top:48px}
 .doors a{padding:38px 28px 44px;border-right:1px solid var(--line);transition:background .4s;display:block}
 .doors a:last-child{border-right:0}
 .doors a:hover{background:var(--paper2)}
@@ -274,7 +274,7 @@ header.onhero .burger span{background:#F3EEE4}
 .doors h4{font-size:19px;margin:0 0 8px;font-weight:800}
 .doors p{font-size:13px;color:var(--ink3);margin:0 0 20px;line-height:1.75}
 .doors .ar{font-size:13px;color:var(--ink);border-bottom:1px solid var(--red);padding-bottom:4px;display:inline-block}
-@media(max-width:900px){.doors{grid-template-columns:repeat(2,1fr)}.doors a:nth-child(2n){border-right:0}.doors a:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:900px){.doors{grid-template-columns:1fr}.doors a{border-right:0;border-bottom:1px solid var(--line)}.doors a:last-child{border-bottom:0}}
 @media(max-width:520px){.doors{grid-template-columns:1fr}.doors a{border-right:0;border-bottom:1px solid var(--line)}.doors a:last-child{border-bottom:0}}
 
 /* ---- 명함 ---- */
@@ -313,7 +313,6 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       <a href="#trade"   data-cn="商品流通" data-en="Trade">상품 유통</a>
       <a href="#center"  data-cn="批发流通中心" data-en="Centers">유통센터</a>
       <a href="#history" data-cn="发展历程" data-en="History">연혁</a>
-      <a href="#news"    data-cn="动态" data-en="News">활동</a>
       <a href="#contact" data-cn="联系" data-en="Contact">문의</a>
     </nav>
     <div style="display:flex;align-items:center;gap:14px">
@@ -402,7 +401,6 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       <tr><th data-cn="法人性质" data-en="Status">법인 성격</th><td data-cn="依据韩国《民法》第32条设立的非营利法人 / 主管机关：产业通商资源部" data-en="Non-profit corporation under Article 32 of the Korean Civil Act / Supervised by the Ministry of Trade, Industry and Energy">「민법」 제32조에 따른 비영리법인 / 주무관청 산업통상자원부</td></tr>
       <tr><th data-cn="设立许可" data-en="Licensed">설립허가</th><td data-cn="2017年5月12日 · 许可编号 第2017-19号 · 法人登记号 270121-0035534" data-en="12 May 2017 · Licence No. 2017-19 · Corp. reg. 270121-0035534">2017년 5월 12일 &nbsp;·&nbsp; 허가번호 제2017-19호 &nbsp;·&nbsp; 법인등록번호 270121-0035534</td></tr>
       <tr><th data-cn="设立宗旨" data-en="Purpose">설립 목적</th><td data-cn="汇聚流通及相关行业从业者，构建流通领域的国际网络，支持韩国优质商品走向海外，为提升国家竞争力作出贡献。" data-en="To build an international network in distribution and, through it, to support Korean products abroad and strengthen national competitiveness.">유통 및 관련 업계 종사자들이 모여 유통 분야의 국제적 네트워크를 구축하고, 이를 활용하여 대한민국 우수 상품의 해외 진출을 지원함으로써 국가 경쟁력 강화에 이바지한다.</td></tr>
-      <tr><th data-cn="组织" data-en="Officers">조직</th><td data-cn="会长 安承完 / 秘书长 金俊 / 秘书处长 金允贞 / 经营组 崔恩妃" data-en="President Ahn Seung Wan / Secretary General Kim Joon / Director Kim Yun Jung / Management Choi Eun Bi">회장 안승완 &nbsp;/&nbsp; 사무총장 김준 &nbsp;/&nbsp; 사무국장 김윤정 &nbsp;/&nbsp; 경영팀 최은비</td></tr>
       <tr><th data-cn="地址" data-en="Address">소재지</th><td data-cn="首尔特别市瑞草区瑞云路13号" data-en="13 Seoun-ro, Seocho-gu, Seoul, Republic of Korea">서울특별시 서초구 서운로 13</td></tr>
     </table>
   </div>
@@ -432,18 +430,6 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       <div class="stat"><div class="n">3.6<i data-cn="万亿韩元" data-en="trn KRW">조 원</i></div><div class="l" data-cn="中国VISA持卡人在韩消费额<span>2024年 · 各国第一</span>" data-en="Chinese VISA spend in Korea<span>2024 · 1st among all countries</span>">중국 VISA 카드 한국 소비액<span>2024년 · 국가별 1위</span></div></div>
       <div class="stat"><div class="n">88.9<i data-cn="万韩元" data-en="K KRW">만 원</i></div><div class="l" data-cn="人均信用卡消费额<span>为日本的3倍</span>" data-en="Per-person card spend<span>3× that of Japan</span>">1인당 신용카드 소비액<span>일본의 3배</span></div></div>
       <div class="stat"><div class="n">47<i>%</i></div><div class="l" data-cn="在韩消费中购物占比<span>约1.7万亿韩元</span>" data-en="Share spent on shopping<span>approx. 1.7 trn KRW</span>">한국 소비 중 쇼핑 비중<span>약 1.7조 원</span></div></div>
-    </div>
-
-    <div class="rv" style="margin-top:62px">
-      <p class="eyebrow ko" data-cn="这笔钱花在哪里" data-en="Where that money goes">그 돈이 어디에 쓰이는가</p>
-      <div class="bars">
-        <div class="bar"><div class="bl" data-cn="餐饮 · 免税店<span>Food &amp; Duty Free</span>" data-en="Food &amp; Duty Free<span>餐饮 · 免税店</span>">식음료 · 면세점<span>Food &amp; Duty Free</span></div><div class="bt"><i class="bf" data-p="100"></i></div><div class="bv">21%</div></div>
-        <div class="bar hl"><div class="bl" data-cn="百货店<span>Department Store</span>" data-en="Department Store<span>百货店</span>">백화점<span>Department Store</span></div><div class="bt"><i class="bf" data-p="71"></i></div><div class="bv">15%</div></div>
-        <div class="bar"><div class="bl" data-cn="服饰 · 杂货 · 路面店<span>Apparel, Goods &amp; Shops</span>" data-en="Apparel, Goods &amp; Shops<span>服饰 · 杂货 · 路面店</span>">의류 · 잡화 · 로드숍<span>Apparel, Goods &amp; Shops</span></div><div class="bt"><i class="bf" data-p="52"></i></div><div class="bv">11%</div></div>
-        <div class="bar hl"><div class="bl" data-cn="医疗健康<span>Medical &amp; Health</span>" data-en="Medical &amp; Health<span>医疗健康</span>">메디컬 헬스케어<span>Medical &amp; Health</span></div><div class="bt"><i class="bf" data-p="48"></i></div><div class="bv" data-cn="约 10%" data-en="approx. 10%">약 10%</div></div>
-        <div class="bar"><div class="bl" data-cn="酒店住宿<span>Hotel</span>" data-en="Hotel<span>酒店住宿</span>">호텔 숙박<span>Hotel</span></div><div class="bt"><i class="bf" data-p="38"></i></div><div class="bv">5~10%</div></div>
-      </div>
-      <p style="font-size:11.5px;color:#7E7368;margin-top:22px" data-cn="资料来源：VISA 商户权益平台资料（2024年）" data-en="Source: VISA merchant benefit platform data (2024)">출처 : VISA 가맹점 혜택 플랫폼 자료 (2024년 기준)</p>
     </div>
 
     <div class="rv" style="margin-top:70px">
@@ -486,12 +472,6 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       </div>
     </div>
 
-    <div class="flow rv">
-      <div><div class="fn">01</div><h5 data-cn="合作门店登记" data-en="Store registered">제휴 매장 등록</h5><p>Partner onboarding</p></div>
-      <div><div class="fn">02</div><h5 data-cn="入境前曝光" data-en="Exposed before arrival">입국 전 노출</h5><p>Pre-arrival exposure</p></div>
-      <div><div class="fn">03</div><h5 data-cn="领券 · 登记卡片" data-en="Coupon &amp; card">쿠폰 수령 · 카드 등록</h5><p>Claim &amp; register</p></div>
-      <div><div class="fn">04</div><h5 data-cn="到店支付 · 返现结算" data-en="Pay &amp; settle">매장 결제 · 캐시백 정산</h5><p>Pay &amp; cashback</p></div>
-    </div>
   </div>
 </section>
 
@@ -591,8 +571,6 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
         <div><div class="pin"></div><div class="city">Shanghai</div><div class="kr" data-cn="上海" data-en="Shanghai">상하이</div><div class="rl" data-cn="国际展示交易中心<br>一带一路" data-en="Intl. Exhibition &amp; Trade Center<br>Belt and Road">국제전시교역센터<br>일대일로</div></div>
         <div><div class="pin"></div><div class="city">Hangzhou</div><div class="kr" data-cn="杭州" data-en="Hangzhou">항저우</div><div class="rl" data-cn="华东运营据点" data-en="East China operations">화동 운영 거점</div></div>
       </div>
-      <div class="ph" style="aspect-ratio:21/8;margin-top:40px"><img src="assets/beltroad.jpg" alt="" loading="lazy"></div>
-      <p class="cap" data-cn="上海国际展示交易中心（一带一路）— 韩国优质商品进入中国的通道" data-en="Shanghai International Exhibition &amp; Trade Center (Belt and Road) — the China entry point for Korean products">상하이 국제전시교역센터 (일대일로) — 한국 우수상품의 중국 진입 통로</p>
     </div>
   </div>
 </section>
@@ -635,26 +613,10 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
   </div>
 </section>
 
-<!-- ============ 06 ACTIVITY ============ -->
-<section id="news" style="background:var(--paper2);border-top:1px solid var(--line2)">
-  <div class="wrap">
-    <p class="eyebrow rv">06 — Activity</p>
-    <h2 class="sec rv" data-cn="最近在做的事" data-en="What we are doing now">최근에 하고 있는 일</h2>
-    <p class="sec-sub rv" data-cn="协会的活动按日期公开记录。" data-en="The association records its activity by date.">협회의 활동은 날짜와 함께 기록합니다.</p>
-    <div class="news rv">
-      <div class="it"><div class="dt">2026. 11</div><div class="tt" data-cn="开通官方域名 imd.or.kr，上线三语官方网站" data-en="Official domain imd.or.kr opens; trilingual website launched">공식 도메인 imd.or.kr 개통 · 한·중·영 홈페이지 공개</div><div class="tg">Notice</div></div>
-      <div class="it"><div class="dt">2026</div><div class="tt" data-cn="启动与VISA中国的联动引流业务 — 百货店 · 免税店 · 医疗机构 · 路面店 · 餐厅" data-en="VISA China inbound linkage begins — department stores, duty free, clinics, shops and restaurants">비자차이나 연계 모객 사업 개시 — 백화점 · 면세점 · 병원 · 로드숍 · 식당</div><div class="tg">Business</div></div>
-      <div class="it"><div class="dt">2026. 10</div><div class="tt" data-cn="向产业通商资源部提交协会运营现状资料" data-en="Operating status report submitted to the Ministry of Trade, Industry and Energy">산업통상자원부에 협회 운영현황 자료 제출</div><div class="tg">Report</div></div>
-      <div class="it"><div class="dt">2025</div><div class="tt" data-cn="与安全财团签署业务协议" data-en="Business agreement signed with the Safety Foundation">안전재단 업무협약 체결</div><div class="tg">Agreement</div></div>
-      <div class="it"><div class="dt">2023. 11</div><div class="tt" data-cn="与首尔市校园城事业团（光云大 · 首尔市立大 · 韩国外大）签署交流合作协议" data-en="Exchange agreement with the Seoul Campus Town programme (Kwangwoon, UOS, HUFS)">서울시 캠퍼스타운 사업단(광운대·서울시립대·한국외대) 교류협력 협약</div><div class="tg">Agreement</div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ 07 CONTACT ============ -->
 <section id="contact">
   <div class="wrap">
-    <p class="eyebrow rv">07 — Contact</p>
+    <p class="eyebrow rv">06 — Contact</p>
     <h2 class="sec rv" data-cn="您想从哪扇门进来？" data-en="Which door are you coming through?">어느 쪽으로 오셨습니까</h2>
     <p class="sec-sub rv" data-cn="按来访目的选择，我们会由对应负责人直接回复。" data-en="Pick the door that fits; the person in charge replies directly.">목적에 맞는 문을 고르시면 담당자가 직접 회신합니다.</p>
 
@@ -677,20 +639,13 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
         <p data-cn="希望入驻中心、参加MD课程或需要派驻人才的企业" data-en="To display in a center, join the MD programme, or request a merchandiser">센터 입점, MD 과정 수강, 인력 배정이 필요한 곳</p>
         <span class="ar" data-cn="咨询 →" data-en="Enquire →">입점 · 과정 문의 →</span>
       </a>
-      <a href="mailto:sg@imd.or.kr?subject=%5B%ED%9A%8C%EC%9B%90%20%EA%B0%80%EC%9E%85%5D%20">
-        <div class="dn">04</div>
-        <h4 data-cn="入会 · 媒体" data-en="Membership &amp; Press">회원 가입 · 언론</h4>
-        <p data-cn="流通 · 贸易领域MD的入会申请，以及采访与资料索取" data-en="Membership for merchandisers in retail and trade, plus press enquiries">유통·무역 분야 MD의 가입 신청, 취재·자료 요청</p>
-        <span class="ar" data-cn="联系 →" data-en="Contact →">가입 · 취재 문의 →</span>
-      </a>
     </div>
 
     <div class="card rv">
       <div>
-        <p class="nm">김 준 <small>Kim Joon</small></p>
-        <p class="role" data-cn="秘书长 &nbsp;Secretary General" data-en="Secretary General &nbsp;秘书长">사무총장 &nbsp;Secretary General &nbsp;秘书长</p>
+        <p class="nm" data-cn="社团法人 国际MD协会" data-en="Association of International Merchandisers">사단법인 국제MD협회</p>
+        <p class="role" data-cn="产业通商资源部主管 非营利法人 · 设立许可 第2017-19号" data-en="Non-profit corporation · Licence No. 2017-19">산업통상자원부 소관 비영리법인 &nbsp;·&nbsp; 설립허가 제2017-19호</p>
         <dl>
-          <dt>MOBILE</dt><dd><a href="tel:+821028888288">010 2888 8288</a></dd>
           <dt>TEL</dt><dd><a href="tel:+820220882269">02 2088 2269</a></dd>
           <dt>EMAIL</dt><dd><a href="mailto:sg@imd.or.kr">sg@imd.or.kr</a></dd>
           <dt>WEB</dt><dd><a href="https://imd.or.kr">imd.or.kr</a></dd>
@@ -699,10 +654,8 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       </div>
       <div class="rt">
         <img src="assets/mark.png" alt="">
-        <p style="font-size:17px;font-weight:800;letter-spacing:.08em;margin:0 0 5px">사단법인 국제MD협회</p>
-        <p style="font-family:var(--la);font-size:12px;letter-spacing:.2em;color:var(--ink3);margin:0">Association of International Merchandisers</p>
-        <p style="font-size:13px;color:var(--ink3);margin:4px 0 0">社团法人 国际MD协会</p>
-        <div class="legal" data-cn="韩国产业通商资源部主管 非营利法人<br>设立许可 第2017-19号 · Since 2002" data-en="Non-profit corporation supervised by the Ministry of Trade, Industry and Energy<br>Licence No. 2017-19 · Since 2002">산업통상자원부 소관 사단법인<br>설립허가 제2017-19호 · Since 2002</div>
+        <p style="font-family:var(--la);font-size:12px;letter-spacing:.2em;color:var(--ink3);margin:0 0 4px">Association of International Merchandisers</p>
+        <p style="font-size:13px;color:var(--ink3);margin:0">社团法人 国际MD协会</p>
         <div class="offices">Seoul · Alabama · LA · Shanghai · Hangzhou</div>
       </div>
     </div>
