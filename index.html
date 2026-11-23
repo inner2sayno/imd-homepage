@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>사단법인 국제MD협회 — 외국인을 한국으로, 한국 상품을 세계로</title>
-<meta name="description" content="2002년 유통 현장의 상품기획자들이 모여 출발해 2017년 산업통상자원부 설립허가를 받은 비영리 사단법인. 외국인 관광객 모객, 한국 상품의 국내외 판로, 홀세일 유통센터 운영 — 세 가지 일을 합니다.">
+<meta name="description" content="2017년 산업통상자원부 설립허가를 받은 비영리 사단법인. 외국인 관광객 모객, 한국 상품의 국내외 판로, 홀세일 유통센터 운영 — 세 가지 일을 합니다.">
 <meta property="og:title" content="사단법인 국제MD협회">
 <meta property="og:description" content="외국인을 한국의 매장으로, 한국 상품을 세계의 매대로.">
-<meta property="og:image" content="https://imd.or.kr/assets/hero-street.jpg">
+<meta property="og:image" content="https://imd.or.kr/assets/showroom2.jpg">
 <meta property="og:url" content="https://imd.or.kr">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/mark.png">
@@ -48,10 +48,6 @@ h2.sec{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.022em;mar
 /* ---- 헤더 ---- */
 header{position:fixed;inset:0 0 auto 0;z-index:80;transition:background .45s,border-color .45s,backdrop-filter .45s;border-bottom:1px solid transparent}
 header.solid{background:rgba(243,238,228,.94);backdrop-filter:blur(12px);border-bottom-color:var(--line2)}
-header.onhero .menu a,header.onhero .brand b,header.onhero .brand i{color:#F3EEE4}
-header.onhero .lang{border-color:rgba(243,238,228,.35);background:rgba(0,0,0,.18)}
-header.onhero .lang button{color:#D8D0C2}
-header.onhero .burger span{background:#F3EEE4}
 .nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
 .brand img{width:30px;height:30px}
@@ -69,35 +65,31 @@ header.onhero .burger span{background:#F3EEE4}
 @media(max-width:1060px){
   .menu{position:fixed;inset:82px 0 auto 0;background:var(--paper);flex-direction:column;gap:0;padding:6px 16px 20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s;z-index:-1}
   .menu.open{transform:none}
-  header.onhero .menu a{color:var(--ink2)}
   .menu a{width:100%;padding:14px 0;border-bottom:1px solid var(--line2);font-size:15px}
   .menu a::after{display:none}
   .burger{display:block}
 }
 
 /* ---- 히어로 ---- */
-.hero{padding:0;position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#F3EEE4;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url('assets/hero-street.jpg') center 42%/cover no-repeat;transform:scale(1.04)}
-.hero .ov{position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(20,17,14,.74) 0%,rgba(20,17,14,.36) 32%,rgba(20,17,14,.64) 74%,rgba(20,17,14,.93) 100%)}
-.hero .in{position:relative;z-index:2;width:100%}
-.hero .kick{font-family:var(--la);font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:#DDCDB9;margin:0 0 20px}
-.hero h1{font-size:clamp(30px,5.1vw,62px);font-weight:800;line-height:1.3;letter-spacing:-.025em;margin:0 0 24px;max-width:17em;text-shadow:0 2px 24px rgba(0,0,0,.35)}
-.hero h1 em{font-style:normal;color:#E8A89C}
-.hero .sub{font-size:clamp(14px,1.6vw,17.5px);color:#CFC4B6;max-width:40em;margin:0 0 40px;line-height:1.95}
-.hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:62px}
-.btn{display:inline-block;padding:15px 32px;font-size:14.5px;letter-spacing:.06em;border:1px solid rgba(243,238,228,.5);color:#F3EEE4;transition:.35s}
-.btn:hover{background:#F3EEE4;color:var(--ink);border-color:#F3EEE4}
+.hero{padding:168px 0 0;background:var(--paper);text-align:center}
+.hero .hmk{width:60px;margin:0 auto 30px}
+.hero .kick{font-family:var(--la);font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink3);margin:0 0 26px}
+.hero h1{font-size:clamp(29px,4.7vw,57px);font-weight:800;line-height:1.33;letter-spacing:-.026em;margin:0 auto 28px;max-width:17em;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sub{font-size:clamp(14px,1.55vw,17px);color:var(--ink2);max-width:40em;margin:0 auto 44px;line-height:2}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:92px}
+.btn{display:inline-block;padding:15px 32px;font-size:14.5px;letter-spacing:.06em;border:1px solid var(--line);color:var(--ink);transition:.35s}
+.btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .btn.solid{background:var(--red);border-color:var(--red);color:#fff}
 .btn.solid:hover{background:#8E2B23;border-color:#8E2B23;color:#fff}
-.hbar{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(243,238,228,.22)}
-.hbar>div{padding:26px 22px 34px;border-right:1px solid rgba(243,238,228,.14)}
+.hbar{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);text-align:left}
+.hbar>div{padding:30px 24px 38px;border-right:1px solid var(--line)}
 .hbar>div:last-child{border-right:0}
-.hbar .n{font-size:clamp(22px,2.7vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.hbar .n i{font-style:normal;font-size:.45em;color:#E8A89C;margin-left:5px}
-.hbar .t{font-size:12px;color:#BCB0A2;margin-top:8px;line-height:1.6}
-@media(max-width:860px){.hbar{grid-template-columns:1fr}.hbar>div{border-right:0;border-bottom:1px solid rgba(243,238,228,.14);padding:16px 0 18px}.hbar>div:last-child{border-bottom:0}}
-@media(max-width:760px){.hero .acts{margin-bottom:34px}}
+.hbar .n{font-size:clamp(22px,2.7vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--ink)}
+.hbar .n i{font-style:normal;font-size:.45em;color:var(--red);margin-left:5px}
+.hbar .t{font-size:12px;color:var(--ink3);margin-top:9px;line-height:1.6}
+@media(max-width:860px){.hbar{grid-template-columns:1fr}.hbar>div{border-right:0;border-bottom:1px solid var(--line);padding:18px 0 20px}.hbar>div:last-child{border-bottom:0}}
+@media(max-width:760px){.hero{padding-top:124px}.hero .acts{margin-bottom:52px}}
 
 /* ---- 신뢰 바 ---- */
 .trust{background:var(--ink);color:#C9BEB0;padding:17px 0;font-size:12.5px;letter-spacing:.06em}
@@ -301,11 +293,11 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
 </head>
 <body class="lang-ko">
 
-<header id="hd" class="onhero">
+<header id="hd" class="solid">
   <div class="wrap nav">
     <a class="brand" href="#top">
       <img src="assets/mark.png" alt="국제MD협회">
-      <span><b data-cn="国际MD协会" data-en="IMD ASSOCIATION">국제MD협회</b><i>Since 2002</i></span>
+      <span><b data-cn="国际MD协会" data-en="IMD ASSOCIATION">국제MD협회</b><i>Since 2017</i></span>
     </a>
     <nav class="menu" id="menu">
       <a href="#about"   data-cn="协会概况" data-en="About">협회 소개</a>
@@ -326,11 +318,11 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="bg"></div><div class="ov"></div>
   <div class="in">
     <div class="wrap">
-      <p class="kick" data-cn="韩国产业通商资源部主管 社团法人 · 2002年起" data-en="Non-profit corporation · Ministry of Trade, Industry and Energy · Since 2002">산업통상자원부 소관 사단법인 · Since 2002</p>
-      <h1 data-cn="把外国客人<em>带进</em>韩国的门店，<br>把韩国商品<em>送上</em>世界的货架。" data-en="Foreign customers <em>into</em> Korean stores.<br>Korean products <em>onto</em> the world's shelves.">외국인을 한국의 <em>매장</em>으로,<br>한국 상품을 세계의 <em>매대</em>로.</h1>
+      <img class="hmk" src="assets/mark.png" alt="">
+      <p class="kick" data-cn="韩国产业通商资源部主管 社团法人 · 2017年设立" data-en="Non-profit corporation · Ministry of Trade, Industry and Energy · Since 2017">산업통상자원부 소관 사단법인 · Since 2017</p>
+      <h1 data-cn="把外国客人<em>带进</em>韩国的门店，<br>把韩国商品<em>送上</em>世界的货架。" data-en="Foreign customers <em>into</em> Korean stores.<br>Korean products <em>onto</em> the world’s shelves.">외국인을 한국의 <em>매장</em>으로,<br>한국 상품을 세계의 <em>매대</em>로.</h1>
       <p class="sub" data-cn="协会只做三件事。把外国客人引流到韩国的百货店、免税店、医疗机构、门店与餐厅；把韩国商品卖到国内与海外；在韩国与海外直接运营批发流通中心。" data-en="The association does three things. It brings foreign visitors into Korean department stores, duty free shops, clinics, shops and restaurants. It sells Korean products at home and abroad. And it runs wholesale distribution centers in Korea and overseas.">협회가 하는 일은 세 가지입니다. 외국인을 한국의 백화점·면세점·병원·매장·식당으로 모객하고, 한국 상품을 국내와 해외에 팔고, 전국과 해외에서 홀세일 유통센터를 직접 운영합니다.</p>
       <div class="acts">
         <a class="btn solid" href="#contact" data-cn="洽谈合作" data-en="Start a partnership">제휴 상담 신청</a>
@@ -367,7 +359,7 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       <div class="rv">
         <h2 class="sec" data-cn="我们只做<br>三件事。" data-en="We do three things.<br>Only three.">우리는 세 가지만<br>합니다.</h2>
         <div class="rule-s" style="margin-top:26px"></div>
-        <p class="lead" data-cn="2002年，百货店与电视购物一线的商品企划师们聚在一起，开始共享各自的货架与交易渠道。二十余年后，协会把这些工作收敛成三件：把客人带进来，把商品送出去，再亲自撑住货架。其余的都舍掉了。" data-en="In 2002, merchandisers from department stores and home shopping networks began sharing their shelves and their buyers. Two decades on, the association has narrowed that work to three things: bring the customer in, send the product out, and hold the shelf itself. Everything else has been set aside.">2002년, 백화점과 홈쇼핑 현장에서 상품을 책임지던 사람들이 서로의 매대와 거래선을 나누기 시작했습니다. 20여 년이 지난 지금, 협회는 그 일을 세 가지로 좁혔습니다. 손님을 데려오고, 상품을 내보내고, 그 매대를 직접 지킵니다. 나머지는 덜어냈습니다.</p>
+        <p class="lead" data-cn="2017年获韩国产业通商资源部设立许可的非营利社团法人。其前身是2002年起百货店与电视购物一线商品企划师们共享货架与交易渠道的交流会。如今协会做的事只有三件：把客人带进来，把商品送出去，再亲自撑住货架。其余的都舍掉了。" data-en="A non-profit corporation licensed in 2017 by the Korean Ministry of Trade, Industry and Energy. It grew out of a circle formed in 2002 by merchandisers from department stores and home shopping networks who shared their shelves and their buyers. Today the association does three things: bring the customer in, send the product out, and hold the shelf itself. Everything else has been set aside.">2017년 산업통상자원부의 설립허가를 받은 비영리 사단법인입니다. 출발은 그보다 앞선 2002년, 백화점과 홈쇼핑 현장에서 상품을 책임지던 사람들이 서로의 매대와 거래선을 나누던 모임이었습니다. 지금 협회가 하는 일은 세 가지입니다. 손님을 데려오고, 상품을 내보내고, 그 매대를 직접 지킵니다. 나머지는 덜어냈습니다.</p>
       </div>
       <div class="rv">
         <div class="ph" style="aspect-ratio:4/3"><img src="assets/showroom2.jpg" alt="협회가 운영하는 유통센터" loading="lazy"></div>
@@ -582,9 +574,9 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
     <h2 class="sec rv" data-cn="走过来的路" data-en="How we got here">걸어온 길</h2>
     <p class="sec-sub rv" data-cn="从一个信息交流会，到拥有货架的社团法人。" data-en="From a study circle to a licensed corporation that holds shelves.">정보교류 모임에서 매대를 가진 사단법인까지.</p>
     <div class="tl rv">
-      <div class="row"><div class="yr">2002</div><div class="tx" data-cn="流通一线MD信息交流会成立" data-en="MD study circle formed on the retail floor">유통 현장 MD 정보교류 모임 결성</div></div>
+      <div class="row"><div class="yr">2002</div><div class="tx" data-cn="流通一线MD信息交流会成立" data-en="MD study circle formed on the retail floor — the association’s origin">유통 현장 MD 정보교류 모임 결성 — 협회의 출발</div></div>
       <div class="row"><div class="yr">2015</div><div class="tx" data-cn="与首尔特别市签署创造就业业务协议" data-en="Job creation agreement with the Seoul Metropolitan Government">서울특별시 일자리 창출 업무협약</div></div>
-      <div class="row"><div class="yr">2017</div><div class="tx" data-cn="获产业通商资源部设立许可，转为社团法人" data-en="Licensed by the Ministry of Trade, Industry and Energy">산업통상자원부 설립허가 · 사단법인 전환</div></div>
+      <div class="row on"><div class="yr">2017</div><div class="tx" data-cn="获产业通商资源部设立许可，转为社团法人" data-en="Licensed by the Ministry of Trade, Industry and Energy">산업통상자원부 설립허가 · 사단법인 전환</div></div>
       <div class="row"><div class="yr">2017</div><div class="tx" data-cn="开始运营日本东京ALTA测试门店" data-en="Test store opens at ALTA, Tokyo">일본 도쿄 ALTA 테스트 매장 운영 개시</div></div>
       <div class="row"><div class="yr">2019</div><div class="tx" data-cn="对接上海国际展示交易中心 · 启动SBA渠道支持" data-en="Shanghai trade center linked · SBA channel support begins">상하이 국제전시교역센터 연계 · SBA 판로지원 착수</div></div>
       <div class="row"><div class="yr">2021</div><div class="tx" data-cn="出口对接业绩达到1,000万美元 · 举办第一届韩国流通人之夜" data-en="USD 10M in export linkage · 1st Korea Distribution Night">수출 연계 실적 1,000만 불 달성 · 제1회 대한민국 유통인의 밤</div></div>
@@ -697,12 +689,7 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
   if (saved === 'cn' || saved === 'en') setLang(saved);
 
   var hd = document.getElementById('hd');
-  var heroEl = document.querySelector('.hero');
-  function onScroll(){
-    var y = window.scrollY;
-    hd.classList.toggle('solid', y > 40);
-    hd.classList.toggle('onhero', y < heroEl.offsetHeight - 120);
-  }
+  function onScroll(){ hd.classList.toggle('shadow', window.scrollY > 40); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   var bg = document.getElementById('bg'), menu = document.getElementById('menu');
