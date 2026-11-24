@@ -279,6 +279,35 @@ header.solid{background:rgba(243,238,228,.94);backdrop-filter:blur(12px);border-
 @media(max-width:900px){.doors{grid-template-columns:1fr}.doors a{border-right:0;border-bottom:1px solid var(--line)}.doors a:last-child{border-bottom:0}}
 @media(max-width:520px){.doors{grid-template-columns:1fr}.doors a{border-right:0;border-bottom:1px solid var(--line)}.doors a:last-child{border-bottom:0}}
 
+/* ---- 문의 폼 ---- */
+.form{background:var(--paper2);border:1px solid var(--line);padding:52px 48px;margin-top:28px;scroll-margin-top:110px}
+.form .fh{font-size:22px;font-weight:800;margin:0 0 7px;letter-spacing:-.015em}
+.form .fs{font-size:13.5px;color:var(--ink3);margin:0 0 34px;line-height:1.8}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px}
+.fld{display:flex;flex-direction:column;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:12.5px;letter-spacing:.08em;color:var(--ink3);margin-bottom:9px}
+.fld label i,.agree i{font-style:normal;color:var(--red);margin-left:3px}
+.fld input,.fld select,.fld textarea{font-family:inherit;font-size:15px;color:var(--ink);background:#fff;
+  border:1px solid var(--line);border-radius:0;padding:13px 14px;outline:none;transition:border-color .3s;width:100%}
+.fld textarea{min-height:150px;resize:vertical;line-height:1.8}
+.fld input::placeholder,.fld textarea::placeholder{color:#B4A994}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--red)}
+.agree{grid-column:1/-1;border-top:1px solid var(--line2);padding-top:24px;margin-top:2px}
+.agree label{display:flex;gap:11px;align-items:flex-start;font-size:14px;color:var(--ink2);cursor:pointer;line-height:1.6}
+.agree input{margin:3px 0 0;accent-color:var(--red);width:17px;height:17px;flex:0 0 auto}
+.agree .note{font-size:11.5px;color:var(--ink3);line-height:1.9;margin:13px 0 0;padding-left:28px}
+.fsub{grid-column:1/-1;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:4px}
+.fbtn{background:var(--red);color:#fff;border:0;padding:16px 44px;font-family:inherit;font-size:15px;
+  letter-spacing:.06em;cursor:pointer;transition:.3s}
+.fbtn:hover{background:#8E2B23}
+.fbtn:disabled{opacity:.45;cursor:default}
+.fmsg{font-size:13.5px;line-height:1.7}
+.fmsg.ok{color:#2E6B4F}
+.fmsg.err{color:var(--red)}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+@media(max-width:760px){.form{padding:30px 20px}.fgrid{grid-template-columns:1fr}.fbtn{width:100%}}
+
 /* ---- 명함 ---- */
 .card{background:var(--paper2);border:1px solid var(--line);padding:56px 52px;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;margin-top:48px}
 .card .nm{font-size:28px;font-weight:800;letter-spacing:.06em;margin:0 0 6px}
@@ -623,24 +652,78 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
     <p class="sec-sub rv" data-cn="按来访目的选择，我们会由对应负责人直接回复。" data-en="Pick the door that fits; the person in charge replies directly.">목적에 맞는 문을 고르시면 담당자가 직접 회신합니다.</p>
 
     <div class="doors rv">
-      <a href="mailto:sg@imd.or.kr?subject=%5B%EB%AA%A8%EA%B0%9D%20%EC%A0%9C%ED%9C%B4%5D%20">
+      <a href="#inquiry" data-t="inbound">
         <div class="dn">01</div>
         <h4 data-cn="客流合作" data-en="Inbound">모객 제휴</h4>
         <p data-cn="希望迎接外国客人的百货店、免税店、医疗机构、门店与餐厅" data-en="Department stores, duty free, clinics, shops and restaurants that want foreign customers">외국인 손님을 받고 싶은 백화점·면세점·병원·매장·식당</p>
         <span class="ar" data-cn="洽谈 →" data-en="Talk to us →">제휴 상담 →</span>
       </a>
-      <a href="mailto:sg@imd.or.kr?subject=%5B%EC%83%81%ED%92%88%20%EC%9C%A0%ED%86%B5%5D%20">
+      <a href="#inquiry" data-t="trade">
         <div class="dn">02</div>
         <h4 data-cn="商品流通" data-en="Trade">상품 유통</h4>
         <p data-cn="希望在国内或海外销售自家商品的企业" data-en="Companies that want their product sold at home or abroad">자사 상품을 국내외에 팔고 싶은 기업</p>
         <span class="ar" data-cn="咨询 →" data-en="Enquire →">판로 문의 →</span>
       </a>
-      <a href="mailto:sg@imd.or.kr?subject=%5B%EC%9C%A0%ED%86%B5%EC%84%BC%ED%84%B0%5D%20">
+      <a href="#inquiry" data-t="center">
         <div class="dn">03</div>
         <h4 data-cn="流通中心 · 培训" data-en="Centers &amp; Training">유통센터 · 교육</h4>
         <p data-cn="希望入驻中心、参加MD课程或需要派驻人才的企业" data-en="To display in a center, join the MD programme, or request a merchandiser">센터 입점, MD 과정 수강, 인력 배정이 필요한 곳</p>
         <span class="ar" data-cn="咨询 →" data-en="Enquire →">입점 · 과정 문의 →</span>
       </a>
+    </div>
+
+    <div class="form rv" id="inquiry">
+      <p class="fh" data-cn="在线咨询" data-en="Send an enquiry">온라인 문의</p>
+      <p class="fs" data-cn="提交后由协会负责人直接回复。急件请致电 02-2088-2269。" data-en="A member of the secretariat replies directly. For urgent matters call +82 2 2088 2269.">접수되면 협회 담당자가 직접 회신합니다. 급하시면 02-2088-2269 로 전화 주셔도 됩니다.</p>
+      <form id="iform" novalidate>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" id="fsubj" value="[imd.or.kr] 홈페이지 문의">
+        <div class="fgrid">
+          <div class="fld full">
+            <label for="f_type" data-cn="咨询类型<i>*</i>" data-en="Enquiry type<i>*</i>">문의 유형<i>*</i></label>
+            <select name="문의유형" id="f_type" required>
+              <option value="모객 제휴" data-cn="客流合作" data-en="Inbound partnership">모객 제휴</option>
+              <option value="상품 유통" data-cn="商品流通" data-en="Trade / channels">상품 유통</option>
+              <option value="유통센터 · 교육" data-cn="流通中心 · 培训" data-en="Centers &amp; training">유통센터 · 교육</option>
+              <option value="회원 가입" data-cn="入会" data-en="Membership">회원 가입</option>
+              <option value="언론 · 취재" data-cn="媒体采访" data-en="Press">언론 · 취재</option>
+              <option value="기타" data-cn="其他" data-en="Other">기타</option>
+            </select>
+          </div>
+          <div class="fld">
+            <label for="f_org" data-cn="公司 · 机构名称" data-en="Company / organisation">회사 · 기관명</label>
+            <input type="text" name="회사기관" id="f_org" autocomplete="organization">
+          </div>
+          <div class="fld">
+            <label for="f_name" data-cn="联系人姓名<i>*</i>" data-en="Your name<i>*</i>">담당자 성함<i>*</i></label>
+            <input type="text" name="성함" id="f_name" required autocomplete="name">
+          </div>
+          <div class="fld">
+            <label for="f_tel" data-cn="联系电话<i>*</i>" data-en="Phone<i>*</i>">연락처<i>*</i></label>
+            <input type="tel" name="연락처" id="f_tel" required autocomplete="tel" placeholder="010-0000-0000">
+          </div>
+          <div class="fld">
+            <label for="f_mail" data-cn="电子邮箱<i>*</i>" data-en="Email<i>*</i>">이메일<i>*</i></label>
+            <input type="email" name="이메일" id="f_mail" required autocomplete="email" placeholder="name@company.com">
+          </div>
+          <div class="fld full">
+            <label for="f_msg" data-cn="咨询内容<i>*</i>" data-en="Message<i>*</i>">문의 내용<i>*</i></label>
+            <textarea name="문의내용" id="f_msg" required placeholder="취급 품목, 매장 위치, 희망 일정 등을 적어 주시면 상담이 빨라집니다."></textarea>
+          </div>
+          <div class="agree">
+            <label>
+              <input type="checkbox" id="f_ok" required>
+              <span data-cn="本人同意为咨询答复之目的收集并使用上述个人信息。<i>*</i>" data-en="I agree to the collection and use of the information above for the purpose of replying to this enquiry.<i>*</i>">문의 응대를 위한 개인정보 수집·이용에 동의합니다.<i>*</i></span>
+            </label>
+            <p class="note" data-cn="收集项目：姓名、联系电话、电子邮箱、公司名称、咨询内容 · 使用目的：咨询答复与业务洽谈 · 保存期限：答复完成后3年内销毁。您有权拒绝同意，但届时将无法受理在线咨询。" data-en="Items collected: name, phone, email, organisation, message · Purpose: replying to the enquiry and business discussion · Retention: destroyed within 3 years of completion. You may decline, in which case the online form cannot be used.">수집 항목 : 성함 · 연락처 · 이메일 · 회사명 · 문의 내용 &nbsp;|&nbsp; 이용 목적 : 문의 응대 및 사업 상담 &nbsp;|&nbsp; 보유 기간 : 응대 완료 후 3년 이내 파기. 동의를 거부하실 수 있으며, 이 경우 온라인 문의 접수는 어렵습니다.</p>
+          </div>
+          <div class="fsub">
+            <button type="submit" class="fbtn" data-cn="提交咨询" data-en="Send enquiry">문의 보내기</button>
+            <span class="fmsg" id="fmsg"></span>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div class="card rv">
@@ -679,7 +762,9 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
 (function(){
   var nodes = document.querySelectorAll('[data-cn],[data-en]');
   nodes.forEach(function(n){ n.setAttribute('data-ko', n.innerHTML); });
-  function setLang(l){
+  var curLang = 'ko';
+  function setLang(l, remember){
+    curLang = l;
     document.body.className = 'lang-' + l;
     document.documentElement.lang = l === 'cn' ? 'zh-CN' : (l === 'en' ? 'en' : 'ko');
     nodes.forEach(function(n){
@@ -689,14 +774,37 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
     document.querySelectorAll('.lang button').forEach(function(b){
       b.classList.toggle('on', b.getAttribute('data-l') === l);
     });
-    try{ localStorage.setItem('imd_lang', l); }catch(e){}
+    if (remember) { try{ localStorage.setItem('imd_lang', l); }catch(e){} }
     requestAnimationFrame(check);
   }
   document.querySelectorAll('.lang button').forEach(function(b){
-    b.addEventListener('click', function(){ setLang(b.getAttribute('data-l')); });
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-l'), true); });
   });
-  var saved=null; try{ saved = localStorage.getItem('imd_lang'); }catch(e){}
-  if (saved === 'cn' || saved === 'en') setLang(saved);
+
+  /* ---- 언어 자동 선택 ----
+     방문자가 직접 고른 언어가 있으면 그것을 최우선으로 쓴다.
+     그렇지 않으면 중국어권은 중문, 그 외(한국 포함)는 영문으로 연다.
+     브라우저 언어로 1차 판단해 깜빡임을 없애고, 접속 국가로 한 번 보정한다. */
+  var saved = null; try{ saved = localStorage.getItem('imd_lang'); }catch(e){}
+  if (saved === 'ko' || saved === 'cn' || saved === 'en') {
+    setLang(saved, false);
+  } else {
+    var nl = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    setLang(nl.indexOf('zh') === 0 ? 'cn' : 'en', false);
+    try {
+      var ac = new AbortController();
+      setTimeout(function(){ ac.abort(); }, 2500);
+      fetch('https://get.geojs.io/v1/ip/country.json', {signal: ac.signal})
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          var c = (j && j.country || '').toUpperCase();
+          var want = (c === 'CN') ? 'cn' : 'en';
+          var again = null; try{ again = localStorage.getItem('imd_lang'); }catch(e){}
+          if (!again && want !== curLang) setLang(want, false);
+        })
+        .catch(function(){});
+    } catch(e){}
+  }
 
   var hd = document.getElementById('hd');
   function onScroll(){ hd.classList.toggle('shadow', window.scrollY > 40); }
@@ -705,6 +813,65 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
   var bg = document.getElementById('bg'), menu = document.getElementById('menu');
   bg.addEventListener('click', function(){ menu.classList.toggle('open'); });
   menu.addEventListener('click', function(e){ if (e.target.tagName === 'A') menu.classList.remove('open'); });
+
+  /* ---- 문의 폼 ---- */
+  var MAILTO = 'sg@imd.or.kr';
+  var TXT = {
+    ko:{send:'보내는 중…', ok:'문의가 접수되었습니다. 담당자가 확인 후 회신드리겠습니다.',
+        err:'전송에 실패했습니다. 02-2088-2269 또는 '+MAILTO+' 로 연락 주시면 바로 확인하겠습니다.',
+        req:'필수 항목과 개인정보 수집·이용 동의를 확인해 주세요.'},
+    cn:{send:'发送中…', ok:'咨询已受理，负责人确认后会尽快回复您。',
+        err:'发送失败。请致电 +82 2 2088 2269 或发送邮件至 '+MAILTO+'。',
+        req:'请填写必填项并勾选个人信息收集同意。'},
+    en:{send:'Sending…', ok:'Your enquiry has been received. We will reply shortly.',
+        err:'Sending failed. Please call +82 2 2088 2269 or email '+MAILTO+'.',
+        req:'Please complete the required fields and tick the consent box.'}
+  };
+  function T(k){
+    var l = document.body.className.indexOf('cn')>-1 ? 'cn' : (document.body.className.indexOf('en')>-1 ? 'en' : 'ko');
+    return TXT[l][k];
+  }
+  var TYPEMAP = {inbound:0, trade:1, center:2};
+  document.querySelectorAll('.doors a[data-t]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var sel = document.getElementById('f_type');
+      if (sel) sel.selectedIndex = TYPEMAP[a.getAttribute('data-t')] || 0;
+    });
+  });
+  var iform = document.getElementById('iform');
+  if (iform) {
+    var subj = document.getElementById('fsubj'), ftype = document.getElementById('f_type');
+    function syncSubj(){ if(subj&&ftype) subj.value = '[imd.or.kr] ' + ftype.options[ftype.selectedIndex].value + ' 문의'; }
+    if (ftype) ftype.addEventListener('change', syncSubj);
+    syncSubj();
+    iform.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = document.getElementById('fmsg'), btn = iform.querySelector('.fbtn');
+      if (iform.querySelector('[name="_honey"]').value) return;
+      if (!iform.checkValidity() || !document.getElementById('f_ok').checked) {
+        msg.className = 'fmsg err'; msg.textContent = T('req');
+        iform.reportValidity();
+        return;
+      }
+      syncSubj();
+      btn.disabled = true; msg.className = 'fmsg'; msg.textContent = T('send');
+      var data = {};
+      new FormData(iform).forEach(function(v,k){ if(k!=='_honey') data[k]=v; });
+      fetch('https://formsubmit.co/ajax/' + MAILTO, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
+      }).then(function(r){ return r.json(); })
+        .then(function(j){
+          if (j && (j.success === 'true' || j.success === true)) {
+            iform.reset(); syncSubj();
+            msg.className = 'fmsg ok'; msg.textContent = T('ok');
+          } else { throw new Error('nope'); }
+        })
+        .catch(function(){ msg.className = 'fmsg err'; msg.textContent = T('err'); })
+        .then(function(){ btn.disabled = false; });
+    });
+  }
 
   var items = [].slice.call(document.querySelectorAll('.rv'));
   function fire(el){
