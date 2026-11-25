@@ -1,0 +1,13 @@
+# 사단법인 국제MD협회 — https://imd.or.kr
+User-agent: *
+Allow: /
+
+# 네이버 검색로봇
+User-agent: Yeti
+Allow: /
+
+# 다음 검색로봇
+User-agent: Daum
+Allow: /
+
+Sitemap: https://imd.or.kr/sitemap.xml
