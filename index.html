@@ -21,6 +21,10 @@
 <meta name="twitter:description" content="산업통상자원부 소관 비영리법인 · 설립허가 제2017-19호 · Since 2017. 외국인을 한국의 매장으로, 한국 상품을 세계의 매대로.">
 <meta name="twitter:image" content="https://imd.or.kr/assets/og.png">
 <link rel="canonical" href="https://imd.or.kr/">
+<link rel="alternate" hreflang="ko" href="https://imd.or.kr/">
+<link rel="alternate" hreflang="en" href="https://imd.or.kr/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://imd.or.kr/cn/">
+<link rel="alternate" hreflang="x-default" href="https://imd.or.kr/en/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="naver-site-verification" content="e2949acbff942383e566fc38116da96dd73d0ea3">
 <meta name="author" content="사단법인 국제MD협회">
@@ -122,8 +126,8 @@ header.solid{background:rgba(243,238,228,.94);backdrop-filter:blur(12px);border-
 .menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--red);transition:right .35s}
 .menu a:hover::after{right:0}
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.45);transition:.45s}
-.lang button{font-family:var(--la);font-size:11px;letter-spacing:.12em;padding:7px 11px;background:none;border:0;color:var(--ink3);cursor:pointer;line-height:1;transition:.3s}
-.lang button.on{background:var(--red);color:#fff}
+.lang button,.lang a{font-family:var(--la);font-size:11px;letter-spacing:.12em;padding:7px 11px;background:none;border:0;color:var(--ink3);cursor:pointer;line-height:1;transition:.3s;display:inline-block;text-decoration:none}
+.lang button.on,.lang a.on{background:var(--red);color:#fff}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
 .burger span{display:block;width:22px;height:1px;background:var(--ink);margin:5px 0;transition:.3s}
 @media(max-width:1060px){
@@ -809,7 +813,7 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
       <span data-cn="会长 安承完 · 法人登记号 270121-0035534 · 营业执照号 504-82-17125" data-en="President Ahn Seung Wan · Corp. reg. 270121-0035534 · Business reg. 504-82-17125">회장 안승완 · 법인등록번호 270121-0035534 · 사업자등록번호 504-82-17125</span><br>
       <span style="color:#A89C8D">© 2026 International MD Association. All rights reserved.</span>
     </div>
-    <div class="r">imd.or.kr</div>
+    <div class="r"><a href="/" style="margin-right:14px">KO</a><a href="/en/" style="margin-right:14px">EN</a><a href="/cn/">中文</a></div>
   </div>
 </footer>
 
@@ -840,8 +844,12 @@ footer{padding:50px 0 64px;border-top:1px solid var(--line);background:var(--pap
      방문자가 직접 고른 언어가 있으면 그것을 최우선으로 쓴다.
      그렇지 않으면 중국어권은 중문, 그 외(한국 포함)는 영문으로 연다.
      브라우저 언어로 1차 판단해 깜빡임을 없애고, 접속 국가로 한 번 보정한다. */
+  var qlang = null;
+  try { qlang = new URLSearchParams(location.search).get('lang'); } catch(e){}
   var saved = null; try{ saved = localStorage.getItem('imd_lang'); }catch(e){}
-  if (saved === 'ko' || saved === 'cn' || saved === 'en') {
+  if (qlang === 'ko' || qlang === 'cn' || qlang === 'en') {
+    setLang(qlang, true);
+  } else if (saved === 'ko' || saved === 'cn' || saved === 'en') {
     setLang(saved, false);
   } else {
     var nl = (navigator.language || navigator.userLanguage || '').toLowerCase();
